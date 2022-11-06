@@ -1,0 +1,30 @@
+name: ci
+
+on:
+  push:
+    branches:
+     - main
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: setup hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+    - name: build hugo
+      run: hugo --minify
+    - name: deploy website
+      uses: easingthemes/ssh-deploy@main
+      env:
+        ARGS: "-vrp --delete"
+        SSH_PRIVATE_KEY: ${{ secrets.key }}
+        REMOTE_HOST: ${{ secrets.host }}
+        REMOTE_PORT: ${{ secrets.port }}
+        REMOTE_USER: ${{ secrets.user }}
+        TARGET: "~/www/xaizone.eu"
+        SOURCE: "public/"
