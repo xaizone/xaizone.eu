@@ -5,6 +5,7 @@ tags:
   - review
   - peripheral
   - mouse
+description: "My thoughts on Xtrfy M42 Wired and why it might be the claw grip mouse."
 ---
 
 Specifications:
