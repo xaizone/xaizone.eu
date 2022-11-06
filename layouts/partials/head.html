@@ -3,9 +3,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
-<meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ end }}{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
 <meta name="author" content="{{ .Site.Params.author }}">
 <link rel="canonical" href="{{ .Site.BaseURL }}">
 <link rel="stylesheet" href="{{ .Site.Params.stylesheet | relURL }}">
 <link rel="shortcut icon" href="{{ .Site.Params.favicon | relURL }}">
-{{ range .AlternativeOutputFormats -}}{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}{{ end -}}
+{{- range .AlternativeOutputFormats -}}{{- printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}{{- end -}}

@@ -1,6 +1,7 @@
 baseURL: 'http://example.org/'
 languageCode: en
 title: 'xaizone.eu'
+enableRobotsTXT: true
 
 params:
   dateFormat: '2006-01-02'
@@ -23,8 +24,3 @@ menu:
 
 taxonomies:
   tag: tags
-
-markup:
-  highlight:
-    noClasses: true
-    style: api

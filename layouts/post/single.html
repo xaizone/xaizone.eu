@@ -4,11 +4,11 @@
 <span><time datetime="{{ .Date }}">{{ .Date | time.Format .Site.Params.dateFormat }}</time></span>
 <span>
 {{- with .Params.tags -}}
-    {{- if ge (len .) 1 -}}
-        {{- range . -}}
-            <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/">{{ . }}</a>
-        {{ end -}}
-    {{- end -}}
+{{- if ge (len .) 1 -}}
+{{- range . -}}
+<a href="/tags/{{ . | urlize }}">{{ . }}</a>
+{{ end -}}
+{{- end -}}
 {{- end -}}
 </span>
 {{ .Content }}

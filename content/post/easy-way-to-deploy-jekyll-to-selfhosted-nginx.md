@@ -5,6 +5,7 @@ tags:
   - guide
   - code
   - github
+description: "Deploy your Jekyll website to self-hosted NGINX with ease using GitHub Actions."
 ---
 today i'll show you how you can easily deploy jekyll websites to your server with [github actions](https://docs.github.com/en/actions).
 
