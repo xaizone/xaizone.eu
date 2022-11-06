@@ -91,4 +91,4 @@ Add these secrets:
 
 and that's it! 
 
-github will now take care of building and deploying your jekyll website to your server.
+GitHub will now take care of building and deploying your Jekyll website to your server.
