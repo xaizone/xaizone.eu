@@ -4,53 +4,62 @@ date: 2022-11-04
 tags: 
   - guide
   - software
-  - windows
+  - gaming
+description: "Force your display to scale non-native resolutions using CRU (Custom Resolution Utility)."
 ---
-`DISLAIMER: if you want to setup custom resolution with display scaling using this guide and your monitor has G-SYNC, this guide will not work for you due to G-SYNC monitors only supporting common resolutions e.g. 1280x720, ...`
+`DISLAIMER: If you want to setup custom resolution with display scaling using this guide and your monitor has G-SYNC, this guide will not work for you due to G-SYNC monitors only supporting common resolutions e.g. 1280x720, ...`
 
-this article will cover how to make your monitor scale the output image instead of your gpu, which will result in sharper image[^3] and negligible[^1] latency improvement. it can also fix issues with games changing your monitor's refresh rate to 60hz.
+This guide will cover how to make your display scale non-native resolutions instead of your gpu, which will result in sharper image[^3] and negligible[^1] latency improvement. Setting this up can also fix the issue with games changing your monitor's refresh rate.
 
-i believe you can set this up on any monitor (read disclaimer at the top of the page), but make sure to check your monitor osd first and look for something like `display mode` or `picture format`, you will later use this setting to scale the game however you like it (stretched/black bars).
+I believe you can set this up on any monitor `(READ DISCLAIMER AT THE TOP)`, but to make sure check your monitor's menu (OSD) first and look for `Display mode` or `Picture format` (or something similar). You will later use this setting to scale the image (stretched, blackbars, ...).
 
-pros/cons:
-- (+) sharper image[^3]
-- (+) fixes games changing refresh rate
-- (+) input latency improvement[^1]
-- (-) longer alt-tab times[^2]
+Plus:
+- Sharper image[^3]
+- Eliminates games changing refresh rate
+- Input latency improvement[^1]
 
-prerequisites:
-- [cru-1.5.2.zip](https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU)
+Minus:
+- Longer Alt+Tab[^2]
 
-download custom resolution utility and extract it, the archive will also come with other useful programs[^4]. make sure you **KEEP THEM**, they are necessary in the process of setting up and getting you recovered if anything goes wrong.
+Prerequisites:
+- [CRU (Custom Resolution Utility)](https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU)
 
-open custom resolution utility, open the extension block at the bottom and you will see a list of resolutions: 
+Download CRU (Custom Resolution Utility) and extract it. The archive will contain other useful programs[^4]. **KEEP THEM**, they are necessary in the process of setting up and getting you recovered if anything goes wrong.
 
-![extension block cru](/img/CRU_2jXjoOW4pJ.png)
+Open CRU (Custom Resolution Utility), click and open the extension block at the bottom and you will see a list of resolutions: 
 
-`! if your monitor is above 655.35 MHz pixel clock (~280hz @ 1080P), you will have to add your resolutions in an extension block Display ID 1.3 (or 2.0) !`
+![Default Extension Block in CRU](/img/CRU_2jXjoOW4pJ.png)
 
-click on your native resolution (e.g. 1920x1080@240), open it and click copy in the top right, exit out and click add in detailed resolutions (read above if your monitor is 280hz or higher), then paste in the top right.
+`! ATTENTION ! If the resolution you want to use is above 655.35 MHz pixel clock (~280hz @ 1080P), you will have to add your resolutions in an extension block - Display ID 1.3 (or 2.0) !`[^5]
 
-now you can delete any other resolution, default extension block and other extension block that you didn't set up by clicking delete all or none on everything, only keep your newly added native resolution in the detailed resolutions tab (or extension block).
+Click on your native resolution (e.g. 1920x1080@240), open it and click copy in the top right, exit out and click add in detailed resolutions (or in an extension block -> detailed resolutions), then paste in the top right.
 
-add any resolutions you play on in detailed resolutions tab (or extension block), timing - `exact reduced`:
+Now you can delete any other resolution and/or unnecessary extension blocks. Only keep your newly added native resolution.
 
-![720p resolution cru](/img/CRU_xkrhtsmLgl.png)
+Add the resolution you play on in the detailed resolutions tab (or extension block as described above) and use timing - `exact reduced`:
 
-exit out of cru by clicking OK and run `restart64.exe` as an admin, if anything goes wrong and you don't see any image - press `F8`, your display will go into safe mode and you will be able to change the settings or reset to default[^4].
+![Adding Non-Native Resolution in CRU](/img/CRU_xkrhtsmLgl.png)
 
-make sure you either have `aspect ratio` or `no scaling` set in your gpu control panel, otherwise this won't work, you can always check your monitor osd if display scaling works by checking your active resolution (if it matches the one you have set in-game and is lower than your native -> display scaling is working)
+Exit out of CRU (Custom Resolution Utility) by clicking OK and run `restart64.exe`[^4] as an administrator, if anything goes wrong and you don't see your desktop - press `F8`. This will switch your display safe mode and you will be able to change the settings or reset[^4] to default.
 
-and that's everything, your monitor will now take care of scaling your image.
+Make sure you either have `aspect ratio` or `no scaling` set in your GPU's control panel, otherwise any of this this won't work. You can always check your monitor osd if display scaling works by checking your active resolution, if it matches the one you have set in-game and is lower than your native -> display scaling is working!
 
-![cru final example](/img/CRU_example.png)
+and that's everything. Use your monitor's OSD to change the way the image gets scaled.
 
-(if you have any issues try reading through the [thread](https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU) on monitor tests forum)
+Tip[^2]: If you hate the longer Alt+Tab times, you can completely eliminate this extra delay by changing your desktop resolution to the one you are using in-game.
 
-[^1]: some sources state that there's a negligible input latency improvement due to gpu adding tiny bit of delay when scaling your image (<1ms) - not humanly noticeable :-)
+![Final CRU Setup Example](/img/CRU_example.png)
 
-[^2]: if your resolution on desktop and in-game is mismatched it will take longer to alt-tab due to the monitor having to change it's resolution everytime you exit your game (e.g. 1280x720 -> 1920x1080). this can be completely avoided by changing your desktop resolution to the one you have set in-game. make sure you change the resolution with your gpu control panel, changing the resolution in windows settings will not change it properly!
+If you have any issues try reading through the thread on Monitor Tests forum.
 
-[^3]: how sharp the image will be depends on the quality of your monitor's scaler, different monitors will have different results, i tried this on my zowie xl2546 and asus xv252q and the image was significantly sharper on my zowie xl2546.
+> https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU
 
-[^4]: reset-all.exe - resets all your monitor settings back to default, restart64.exe - restarts your gpu drivers + opens safe menu.
+[^1]: Different sources state that making your display scale your non-native resolutions gives you a negligible input latency improvement, the GPU is adding a tiny bit of delay (<1ms)
+
+[^2]: If your desktop resolution and resolution in-game are mismatched it will take longer to Alt+Tab due to your monitor having to change it's resolution everytime you exit to desktop (e.g. 1280x720 -> 1920x1080). This can be completely eliminated by changing your desktop resolution to the one you are using in-game. Make sure you change the resolution with your GPU's control panel, changing the resolution in Windows settings does not change it properly!
+
+[^3]: How sharp the image is gonna be depends on the quality of your monitor's scaler. Different monitors will have different results. I tried this on my Zowie XL2546 and Asus XV252Q and the image was significantly sharper on the Zowie.
+
+[^4]: reset-all.exe - reset all monitor settings back to default; restart64.exe - restarts gpu drivers + opens recovery menu.
+
+[^5]: I recommend you to use Display ID 1.3 since it has better compatibility, you can try and mess around with Display ID 2.0 extension block.
