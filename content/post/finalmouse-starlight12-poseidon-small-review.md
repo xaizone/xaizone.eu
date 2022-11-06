@@ -5,38 +5,39 @@ tags:
   - review
   - peripheral
   - mouse
+description: "Finalmouse Starlight-12 Poseidon Small Review, not worth the hype..."
 ---
 
-specs:
-- length: 11.5cm
-- width: 5.3cm
-- height: 3.5cm
-- weight: 42g
-- sensor: finalsensor 
+Specifications:
+- Length: 11.5cm
+- Width: 5.3cm
+- Height: 3.5cm
+- Weight: 42g
+- Sensor: Finalsensor 
 
-pros:
-- nice design
-- extremely light
-- material
-- crispy clicks (lmb, rmb, side buttons)
+Plus:
+- Nice design
+- Extremely light
+- Material
+- Great clicks
 
-cons:
-- size
-- expensive
-- limited drop
-- bad qc
-- honeycomb design (sharp edges)
+Minus:
+- Size
+- Expensive
+- Limited availability
+- Bad QC
+- Sharp edges
 
-i really wanted a finalmouse mouse for a long time, but never got my head around to spend double or sometimes even triple the msrp to some reseller, but on the last drop (poseidon) i got lucky and got one. i originally wanted to get the medium size, which would probably be WAY better for any adult with normal hand size, but i was unlucky and it was sold out before i got to pay my order, so i at least got the small one.
+I wanted to get a Finalmouse mouse for a long time, but never got my head around to spend the insane amount of money these go for. On third-party market they can go for double or sometimes even triple the MSRP, which is outrageous. On the last drop (Poseidon) I got lucky and got one for the MSRP. Originally I wanted to get the medium size, but I got unlucky and it got sold out before I had a chance to pay for my order, so I settled on the small size.
 
-since i'm from europe i had to pay import fees, so the final price was around *220€* - that's quite a lot of money considering it's just a mouse, but you get what you pay for, packaging got the "apple vibe", you open the box and the mouse is just nicely sitting there in all of it's glory, it was really nice.
+I'm from Europe, so I had to pay for import/postage fees, the final price got to around 220€ with everything. That's quite a lot of money considering it's "just" a mouse, but you get what you pay for. The packaging is great and it comes off as a premium product. 
 
-as i mentioned above, i wanted to get the medium size, but it was sold out before i got to pay so i settled on the small one, it's way too small for me, i believe way too small for everyone with normal hands, i tried corepad grips, they don't help much with making the mouse bigger. this itself makes the mouse unusable for me, since i can't grip the mouse comfortably. adding honeycomb design on top of that makes it **super** uncomfortable to use the mouse, since the honeycomb edges are quite sharp (*thanks to magnesium*), the mouse will dig into your fingers, which makes it uncomfortable to use even for small amount of time.
+Small is way too small for me, I believe it would be too small for most adults, at least if you want to claw grip the mouse. I tried putting Corepad grips on the mouse, they didn't help much with making the mouse bigger, sadly. This by itself makes the mouse unusable for me, since I can't grip the mouse comfortably. On top of that adding the honeycomb design makes it even more uncomfortable to use the mouse, the honeycomb edges are quite sharp and it digs into your fingers and hand, this is due to the material they've used - magnesium.
 
-clicks are really nice, i've always been a big fan of kailh gm 8.0s, i had them on my xm1r and on my modded g305 and i've always loved them, the same applies to the finalmouse, the clicks are well tuned. i was suprised how crispy the side buttons were, no pre-travel or post-travel.
+The clicks are really nice, I've always been a big fan of Kailh GM 8.0s. A really good implementation from Finalmouse, I was pleasantly surprised by the side buttons as well, very clicky, most mice side buttons are very mushy. 
 
-finalmouse had big issues with qc in the past and it hasn't changed much on this newer model. i must say i got pretty lucky with my copy, my mousewheel is pretty much dead center, just a tiny bit off to the right. i've seen pictures of people's poseidons where the mousewheel touches the main buttons, something like this is unacceptable for such a premium price tag and it should be their main focus for future releases.
+I have to bring up the controversy around Finalmouse and their QC. They've always had issues with QC and it hasn't changed much on this newer model. I got halfway lucky with my copy. My mousewheel is only *slightly* out of center. I've seen pictures of people's Poseidons where the mousewheel touches the main buttons. Something like this is unacceptable for such a premium price tag and it should be their main focus for future releases.
 
-as i mentioned in the beginning of the review, you can only get this mouse in drops, and the drops are also limited to number of pieces, which makes it almost impossible to get one (if you want to pay an "acceptable" amount of money), but on the other hand every mouse is unique, with their colorways and a serial number on the bottom of each mouse.
+You can only get this mouse in limited drops, this makes it almost impossible to get your hands on one. On the other hand every mouse is unique, with their colorways and an engraved serial number on the bottom of each mouse.
 
-tl;dr not really worth the huge hype imo, but overall really good & unique mouse, persisting qc issues, small is more like tiny
+tl;dr: overall good & unique mouse, not worth the big hype, persisting qc issues, small is very small
