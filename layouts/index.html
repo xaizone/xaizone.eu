@@ -1,0 +1,21 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{- with .Site.Menus.social -}}
+{{- if ge (len .) 1 -}}
+<div class="box">
+{{- range . -}}
+<a href="{{ .URL }}">{{ .Name }}</a>
+{{ end -}}
+</div>
+{{- end -}}
+{{- end -}}
+<div class="box">
+<span>posts:</span>
+<ul>{{ range first .Site.Params.postLimit .Site.RegularPages }}
+<li>
+<a href="{{ .Permalink }}">{{ .Date | time.Format .Site.Params.dateFormat }}: {{ lower .Title }}</a>
+</li>{{ end }}
+<li><a href="{{ "/post" | relURL }}">...</a></li>
+</ul>
+</div>
+{{ end }}

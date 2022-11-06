@@ -1,0 +1,30 @@
+baseURL: 'http://example.org/'
+languageCode: en
+title: 'xaizone.eu'
+
+params:
+  dateFormat: '2006-01-02'
+  favicon: 'favicon.svg'
+  stylesheet: 'style.css'
+  postLimit: 5
+  description: 'personal website of xaizone; a simple blog with good intentions'
+  author: xaizone
+
+menu:
+  social:
+  - name: github
+    url: 'https://github.com/xaizone'
+  - name: twitter
+    url: 'https://twitter.com/xaizone'
+  - name: twitch
+    url: 'https://twitch.tv/xaizone'
+  - name: steam
+    url: 'https://steamcommunity.com/id/xaizone'
+
+taxonomies:
+  tag: tags
+
+markup:
+  highlight:
+    noClasses: true
+    style: api

@@ -1,0 +1,57 @@
+:root {
+    --bg: white;
+    --fg: black;
+    --codefg: white;
+    --codebg: black;
+    --border: black;
+    --target: yellow;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: black;
+        --fg: white;
+        --codefg: black;
+        --codebg: white;
+        --border: white;
+        --target: yellow;
+    }
+}
+
+
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: monospace;
+    max-width: 40em;
+}
+
+.box {
+    border: 1px solid var(--border);
+    margin: 1em;
+    padding: 1em;
+}
+
+*:target { 
+    background: var(--target); 
+}
+
+hr {
+    border: 0;
+}
+
+hr:after { 
+    content: '--------------------' 
+}
+
+code {
+    white-space: pre-wrap;
+    background: var(--codebg);
+    color: var(--codefg);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}

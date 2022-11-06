@@ -1,0 +1,17 @@
+{{ define "main" }}
+<h1>{{ lower .Title }}</h1>
+{{- range where .Site.RegularPages "Section" "post" -}}
+<div class="box">
+<a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+<time datetime="{{ .Date }}">{{ .Date | time.Format .Site.Params.dateFormat }}</time><br>
+{{ .WordCount }} words / {{ math.Round (math.Div (.WordCount) 110.0) }} minutes<br>
+{{- with .Params.tags -}}
+    {{- if ge (len .) 1 -}}
+        {{- range . -}}
+            <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/">{{ . }}</a>
+        {{ end -}}
+    {{- end -}}
+{{- end -}}
+</div>
+{{ end }}
+{{ end }}
