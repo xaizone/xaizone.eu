@@ -3,6 +3,7 @@ title: "Xtrfy M42 Review"
 date: 2022-06-22
 tags: 
     - review
+    - peripheral
     - mouse
 ---
 

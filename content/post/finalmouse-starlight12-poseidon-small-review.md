@@ -3,6 +3,7 @@ title: "Finalmouse Starlight-12 Poseidon Small Review"
 date: 2022-06-30
 tags: 
     - review
+    - peripheral
     - mouse
 ---
 

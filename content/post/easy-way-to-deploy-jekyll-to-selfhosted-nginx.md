@@ -3,8 +3,7 @@ title: "Easy way to deploy Jekyll site to self-hosted NGINX using GitHub"
 date: 2022-02-19
 tags: 
   - guide
-  - code
-  - github
+  - software
 description: "Deploy your Jekyll website to self-hosted NGINX with ease using GitHub Actions."
 ---
 today i'll show you how you can easily deploy jekyll websites to your server with [github actions](https://docs.github.com/en/actions).
