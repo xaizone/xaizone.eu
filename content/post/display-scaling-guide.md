@@ -2,9 +2,9 @@
 title: "Display Scaling Guide"
 date: 2022-11-04
 tags: 
-    - guide
-    - software
-    - windows
+  - guide
+  - software
+  - windows
 ---
 `DISLAIMER: if you want to setup custom resolution with display scaling using this guide and your monitor has G-SYNC, this guide will not work for you due to G-SYNC monitors only supporting common resolutions e.g. 1280x720, ...`
 
