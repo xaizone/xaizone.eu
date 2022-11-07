@@ -1,10 +1,11 @@
-{{ define "main" }}
+{{- define "main" }}
 <h1>{{ lower .RelPermalink }}</h1>
-<ul>
 {{- range .Pages }}
-<li>
-<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-</li>
+<div class="box">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+    <time datetime="{{ .Date }}">{{ .Date | time.Format .Site.Params.dateFormat }}</time><br>
+    <span>{{ .WordCount }} words / {{ math.Round (math.Div (.WordCount) 110.0) }} minutes</span><br>
+    <span>{{ partial "tags.html" . }}</span>
+</div>
 {{- end }}
-</ul>
-{{ end -}}
+{{- end }}

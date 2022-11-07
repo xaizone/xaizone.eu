@@ -3,27 +3,33 @@
 {{ with .Site.Menus.social -}}
 {{- if ge (len .) 1 -}}
 <div class="box">
-{{- range . -}}
-<a href="{{ .URL }}">{{ .Name }}</a>
-{{ end -}}
+    {{- range . }}
+    <a href="{{ .URL }}">{{ .Name }}</a>
+    {{- end }}
 </div>
-{{- end -}}
-{{- end -}}
+{{- end }}
+{{- end }}
+
 <div class="box">
 <span>recent writing:</span>
-<ul>{{ range first .Site.Params.postLimit .Site.RegularPages }}
+<ul>
+{{- range first .Site.Params.postLimit .Site.RegularPages }}
 <li>
-<a href="{{ .RelPermalink }}">{{ .Date | time.Format .Site.Params.dateFormat }}: {{ lower .Title }}</a>
-</li>{{ end }}
-<li><a href="{{ "/post" | relURL }}">...</a></li>
+    <a href="{{ .RelPermalink }}">{{ .Date | time.Format .Site.Params.dateFormat }}: {{ lower .Title }}</a>
+</li>
+{{- end }}
+<li>
+    <a href="{{ "/post" | relURL }}">...</a>
+</li>
 </ul>
 </div>
+
 <div class="box">
-<a href="{{ "/tags" | relURL }}">tags</a>:
-{{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
-{{- with $.Site.GetPage (printf "/tags/%s" $name) }}
-<a href={{ .RelPermalink }}>{{ $name }}</a>
-{{ end }}
-{{- end -}}
+    <a href="{{ "/tags" | relURL }}">tags</a>:
+    {{- range $name, $taxonomy := .Site.Taxonomies.tags }}
+    {{- with $.Site.GetPage (printf "/tags/%s" $name) }}
+        <a href={{ .RelPermalink }}>{{ $name }}</a>
+    {{- end }}
+    {{- end -}}
 </div>
-{{ end }}
+{{- end }}

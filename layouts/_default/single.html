@@ -1,4 +1,10 @@
-{{ define "main" }}
-<h1>{{ .Title }}</h1>
+{{- define "main" }}
+<article>
+<header>
+    <h1>{{ .Title }}</h1>
+    <span><time datetime="{{ .Date }}">{{ .Date | time.Format .Site.Params.dateFormat }}</time></span>
+    <span>{{ partial "tags.html" . }}</span>
+</header>
 {{ .Content }}
-{{ end }}
+</article>
+{{- end }}

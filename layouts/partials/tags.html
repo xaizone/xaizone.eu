@@ -1,0 +1,7 @@
+{{- with .Params.tags -}}
+{{- if ge (len .) 1 -}}
+    {{- range . -}}
+        <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+    {{ end -}}
+{{- end -}}
+{{- end -}}
