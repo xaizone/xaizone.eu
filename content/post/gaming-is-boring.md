@@ -14,6 +14,7 @@ Nowadays gaming is really different from what it used to be, let's say like 8-10
 Another thing I really hate about new games is the insane (over)casualization. All games today (there are a few exceptions, e.g. Elden Ring) are made for instant gratification, not to learn over time and master a skill step by step. Look at the state of console's aim assist, I think it speaks for itself (I've included some clips below). Every action in new games is dumbed down to maximum, if a skillful tech is found, where you have to put many hours into to learn it, it's most likely gonna get removed in the next update...
 
 > https://twitter.com/i/status/1579907434289647616
+
 > https://twitter.com/i/status/1574159174161907715
 
 Most of the games that I still enjoy are as old as I am (or even older) and if there's not gonna be a significant change to gaming in the coming years, it's gonna stay like that.
