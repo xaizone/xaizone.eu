@@ -25,6 +25,14 @@ menu:
 taxonomies:
   tag: tags
 
+outputs:
+  section:
+  - HTML
+  taxonomy:
+  - HTML
+  term:
+  - HTML
+
 outputFormats:
   rss:
     mediaType: application/rss+xml

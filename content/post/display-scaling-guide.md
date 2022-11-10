@@ -28,7 +28,7 @@ Download CRU (Custom Resolution Utility) and extract it. The archive will contai
 
 Open CRU (Custom Resolution Utility), click and open the extension block at the bottom and you will see a list of resolutions: 
 
-![Default Extension Block in CRU](/img/CRU_2jXjoOW4pJ.png)
+![Default Extension Block in CRU](/img/CRU_2jXjoOW4pJ.webp)
 
 
 `If the resolution you want to use is above 655.35 MHz pixel clock (~280hz @ 1080P), you will have to add your resolutions in an extension block - Display ID 1.3 (or 2.0)`[^5]
@@ -39,7 +39,7 @@ Now you can delete any other resolution and/or unnecessary extension blocks. Onl
 
 Add the resolution you play on in the detailed resolutions tab (or extension block as described above) and use timing - `Exact reduced`:
 
-![Adding Non-Native Resolution in CRU](/img/CRU_xkrhtsmLgl.png)
+![Adding Non-Native Resolution in CRU](/img/CRU_xkrhtsmLgl.webp)
 
 Exit out of CRU (Custom Resolution Utility) by clicking OK and run `restart64.exe`[^4] as an administrator, if anything goes wrong and you don't see your desktop - press `F8`. This will switch your display safe mode and you will be able to change the settings or reset[^4] to default.
 
@@ -49,7 +49,7 @@ and that's everything. Use your monitor's OSD to change the way the image gets s
 
 Tip:[^2] If you hate the longer Alt+Tab times, you can completely eliminate this extra delay by changing your desktop resolution to the one you are using in-game.
 
-![Final CRU Setup Example](/img/CRU_example.png)
+![Final CRU Setup Example](/img/CRU_example.webp)
 
 If you are still struggling with getting display scaling to work, try reading through the thread on Monitor Tests forum or watch a nice YouTube video made by [KajzerD](https://www.youtube.com/c/KajzerD), I've included both below.
 

@@ -29,7 +29,7 @@ and if you are interested in setting up your own server, you can follow this ama
 
 P.S. If you want to chat with me on IRC, you can find me here -> [irc.libera.chat](ircs://irc.libera.chat/xaizone) :)
 
-![xkcd IRC joke](/img/xkcd_irc.png)
+![xkcd IRC joke](/img/xkcd_irc.webp)
 
 Fun fact: Twitch.tv chat is running on IRC. 
 
