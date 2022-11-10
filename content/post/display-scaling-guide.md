@@ -30,7 +30,8 @@ Open CRU (Custom Resolution Utility), click and open the extension block at the 
 
 ![Default Extension Block in CRU](/img/CRU_2jXjoOW4pJ.png)
 
-`! ATTENTION ! If the resolution you want to use is above 655.35 MHz pixel clock (~280hz @ 1080P), you will have to add your resolutions in an extension block - Display ID 1.3 (or 2.0) !`[^5]
+
+`If the resolution you want to use is above 655.35 MHz pixel clock (~280hz @ 1080P), you will have to add your resolutions in an extension block - Display ID 1.3 (or 2.0)`[^5]
 
 Click on your native resolution (e.g. 1920x1080@240), open it and click copy in the top right, exit out and click add in detailed resolutions (or in an extension block -> detailed resolutions), then paste in the top right.
 
@@ -46,7 +47,7 @@ Make sure you either have `Aspect Ratio` or `No scaling` set in your GPU's contr
 
 and that's everything. Use your monitor's OSD to change the way the image gets scaled.
 
-Tip[^2]: If you hate the longer Alt+Tab times, you can completely eliminate this extra delay by changing your desktop resolution to the one you are using in-game.
+Tip:[^2] If you hate the longer Alt+Tab times, you can completely eliminate this extra delay by changing your desktop resolution to the one you are using in-game.
 
 ![Final CRU Setup Example](/img/CRU_example.png)
 
