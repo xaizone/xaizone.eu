@@ -24,3 +24,8 @@ menu:
 
 taxonomies:
   tag: tags
+
+outputFormats:
+  rss:
+    mediaType: application/rss+xml
+    basename: rss
