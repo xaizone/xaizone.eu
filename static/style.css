@@ -1,18 +1,14 @@
 body {
-    background: white;
-    color: black;
+    background: #fff;
+    color: #000;
     font-family: monospace;
     max-width: 30rem;
 }
 
 .box {
-    border: 1px solid black;
+    border: 1px solid #000;
     margin: 1rem;
     padding: 1rem;
-}
-
-*:target { 
-    background: yellow; 
 }
 
 hr {
@@ -20,13 +16,13 @@ hr {
 }
 
 hr:after { 
-    content: '--------------------' 
+    content: '--------------------';
 }
 
 code {
     white-space: pre-wrap;
-    background: black;
-    color: white;
+    background: #000;
+    color: #fff;
 }
 
 img {
@@ -42,4 +38,21 @@ pre code {
 
 blockquote {
     word-wrap: break-word;
+}
+
+a:link, a:visited {
+    color: #00e;
+}
+
+a:hover {
+    color: #07f;
+}
+
+@media (prefers-color-scheme: dark) {
+    body { background: #111; color: #ccc; }
+    a:link, a:visited { color: #9bf; }
+    a:hover { color: #9df; }
+    .box { border-color: #bbb; }
+    code, pre code { background: #000; color: #9c6; }
+    code { background: none; }
 }
