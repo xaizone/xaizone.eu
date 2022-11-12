@@ -1,5 +1,5 @@
 {{- define "main" }}
-<h1>{{ lower .RelPermalink }}</h1>
+<h1>{{ partial "breadcrumb.html" . }}</h1>
 <ul>
 {{- range .Pages }}
 <li>

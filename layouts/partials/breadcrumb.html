@@ -1,0 +1,11 @@
+{{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+{{- $.Scratch.Add "path" .Site.BaseURL }}
+{{- $.Scratch.Add "path" "/" }}
+<a href="{{ .Site.BaseURL | absURL }}">{{ .Site.Title }}</a>/
+{{- range $index, $element := split $url "/" }}
+    {{- $.Scratch.Add "path" $element }}
+    {{- if ne $element "" -}}
+        <a href="{{ $.Scratch.Get "path" }}/">{{ . }}</a>/
+        {{- $.Scratch.Add "path" "/" -}}
+    {{- end -}}
+{{- end -}}
