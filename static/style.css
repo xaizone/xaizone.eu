@@ -2,13 +2,20 @@ body {
     background: #fff;
     color: #000;
     font-family: monospace;
-    max-width: 30rem;
+    font-size: 14px;
+    max-width: 35rem;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 .box {
     border: 1px solid #000;
     margin: 1rem;
     padding: 1rem;
+}
+
+.center {
+    text-align: center;
 }
 
 hr {
@@ -38,6 +45,7 @@ pre code {
 
 blockquote {
     word-wrap: break-word;
+    text-align: center;
 }
 
 a:link, a:visited {

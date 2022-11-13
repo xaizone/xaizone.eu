@@ -1,8 +1,8 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
+<h1 class="center">{{ .Title }}</h1>
 {{ with .Site.Menus.social -}}
 {{- if ge (len .) 1 -}}
-<div class="box">
+<div class="box center">
     {{- range . }}
     <a href="{{ .URL }}">{{ .Name }}</a>
     {{- end }}
