@@ -1,3 +1,5 @@
+<nav>
+<h1>
 {{- $url := replace .Permalink ( printf "%s" .Site.BaseURL ) "" }}
 <a href="{{ .Site.BaseURL | relURL }}">home</a>/
 {{- range $index, $element := split $url "/" }}
@@ -7,3 +9,5 @@
         {{- $.Scratch.Add "path" "/" -}}
     {{- end -}}
 {{- end -}}
+</h1>
+</nav>

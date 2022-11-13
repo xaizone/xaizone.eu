@@ -1,5 +1,6 @@
 {{- define "main" }}
-<h1>{{ partial "breadcrumb.html" . }}</h1>
+{{ partial "breadcrumb.html" . }}
+<main>
 {{- range .Pages }}
 <div class="box">
     <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
@@ -8,4 +9,5 @@
     <span>{{ partial "tags.html" . }}</span>
 </div>
 {{- end }}
+</main>
 {{- end }}

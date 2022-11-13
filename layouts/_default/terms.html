@@ -1,6 +1,8 @@
 {{- define "main" }}
-<h1>{{ partial "breadcrumb.html" . }}</h1>
+{{ partial "breadcrumb.html" . }}
+<main>
 {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
     <a href="/tags/{{ $name | urlize }}/">{{ $name }}</a><sup>{{ $taxonomy.Count }}</sup>
-{{end}}
+{{- end }}
+</main>
 {{- end }}
