@@ -27,10 +27,10 @@ and if you are interested in setting up your own server, you can follow this ama
 
 > https://landchad.net/irc/
 
-P.S. If you want to chat with me on IRC, you can find me here -> [irc.libera.chat](ircs://irc.libera.chat/xaizone) :)
+P.S. If you want to chat with me on IRC, you can find me here -> [irc.libera.chat](ircs://irc.libera.chat/xaizone) or [irc.rizon.net](ircs://irc.rizon.net/xaizone) :)
 
 ![xkcd IRC joke](/img/xkcd_irc.webp)
 
-Fun fact: Twitch.tv chat is running on IRC. 
+Fun fact: Twitch.tv chat supports IRC.
 
 > https://dev.twitch.tv/docs/irc
