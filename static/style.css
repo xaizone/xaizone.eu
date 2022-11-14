@@ -19,11 +19,9 @@ body {
 }
 
 hr {
-    border: 0;
-}
-
-hr:after { 
-    content: '--------------------';
+    max-width: 100%;
+    border: 1px dashed;
+    margin-block: 2rem;
 }
 
 code {
