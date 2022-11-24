@@ -3,15 +3,11 @@
 <h1 class="center">{{ .Title }}</h1>
 </header>
 <main>
-{{ with .Site.Menus.social -}}
-{{- if ge (len .) 1 -}}
-<div class="box center">
-    {{- range . }}
-    <a href="{{ .URL }}">{{ .Name }}</a>
-    {{- end }}
+<div class="box">
+    <span>remote:</span>
+    <a href="ircs://irc.libera.chat/xaizone">irc</a>
+    <a href="https://github.com/xaizone">github</a>
 </div>
-{{- end }}
-{{- end }}
 
 <div class="box">
 <span>recent writing:</span>

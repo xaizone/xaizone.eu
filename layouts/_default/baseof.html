@@ -5,5 +5,8 @@
 </head>
 <body>
 {{- block "main" . }}{{- end }}
+{{ if ne .Page.Kind "taxonomy" }}
+{{ partial "footer.html" . }}
+{{- end }}
 </body>
 </html>
