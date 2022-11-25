@@ -29,7 +29,7 @@ code {
 }
 
 code:not([class]) {
-    background-color: #ddd;
+    background-color: #ccc;
 }
 
 img {
@@ -62,5 +62,5 @@ a:hover {
     a:link, a:visited { color: #9bf; }
     a:hover { color: #9df; }
     .box { border-color: #bbb; }
-    code:not([class]) { color: #111; background: #8b5; }
+    code:not([class]) { color: #000; }
 }
