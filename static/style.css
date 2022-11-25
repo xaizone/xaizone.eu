@@ -29,7 +29,7 @@ code {
 }
 
 code:not([class]) {
-    background-color: #eee;
+    background-color: #ddd;
 }
 
 img {
