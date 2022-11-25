@@ -1,6 +1,6 @@
 {{- with .Params.tags -}}
 {{- if ge (len .) 1 -}}
-    {{- range . -}}
+    {{- range sort . -}}
         <a href="/tags/{{ . | urlize }}">{{ . }}</a>
     {{ end -}}
 {{- end -}}
