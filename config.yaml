@@ -1,6 +1,7 @@
 baseURL: 'https://xaizone.eu'
 languageCode: en
 title: 'xaizone.eu'
+enableRobotsTXT: true
 
 markup:
   highlight:

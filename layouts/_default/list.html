@@ -1,6 +1,9 @@
 {{- define "main" }}
 {{ partial "breadcrumb.html" . }}
 <main>
+{{- if .Content }}
+{{ .Content }}
+{{- end }}
 {{- range .Pages }}
 <div class="box">
     <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
