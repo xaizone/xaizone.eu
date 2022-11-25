@@ -1,7 +1,10 @@
 baseURL: 'https://xaizone.eu'
 languageCode: en
 title: 'xaizone.eu'
-enableRobotsTXT: true
+
+markup:
+  highlight:
+    style: native
 
 params:
   dateFormat: '2006-01-02'

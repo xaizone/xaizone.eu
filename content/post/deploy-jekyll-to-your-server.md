@@ -21,14 +21,14 @@ Prerequisites:
 You want to start by making `.github/workflows` folder in your repository, here you will make your GitHub workflow file - `main.yml` (or anything else e.g. ci.yml, deploy.yml, ...)
 
 directory tree
-```
+```plain
 .github
 └── workflows
     └── main.yml
 ```
 
 main.yml
-```
+```yml
 # optional - name of your action
 name: deploy on push
 

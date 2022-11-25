@@ -28,6 +28,10 @@ code {
     white-space: pre-wrap;
 }
 
+code:not([class]) {
+    background-color: #eee;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -37,7 +41,6 @@ img {
 pre code {
     display: block;
     padding: 1rem;
-    background: #eee;
     word-wrap: anywhere;
 }
 
@@ -59,6 +62,5 @@ a:hover {
     a:link, a:visited { color: #9bf; }
     a:hover { color: #9df; }
     .box { border-color: #bbb; }
-    pre code { background: #0b0b0b; }
-    code { color: #9c6; }
+    code:not([class]) { color: #111; background: #8b5; }
 }
