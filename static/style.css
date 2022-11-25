@@ -38,6 +38,7 @@ pre code {
     display: block;
     padding: 1rem;
     background: #eee;
+    word-wrap: anywhere;
 }
 
 blockquote {
