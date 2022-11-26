@@ -27,7 +27,7 @@ and if you are interested in setting up your own server, you can follow this ama
 
 > https://landchad.net/irc/
 
-P.S. If you want to chat with me on IRC, you can find me here -> [irc.libera.chat](ircs://irc.libera.chat/xaizone) or [irc.rizon.net](ircs://irc.rizon.net/xaizone) :)
+P.S. If you want to chat with me on IRC, you can find me here -> [irc.libera.chat](ircs://irc.libera.chat/xaizone)
 
 ![xkcd IRC joke](/img/xkcd_irc.webp)
 
