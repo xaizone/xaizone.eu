@@ -72,8 +72,8 @@ a:hover {
 }
 
 .breadcrumb li + li:before {
-    content: "> ";
-    padding-left: 10px;
+    content: ">";
+    padding: 0px 10px 0px 10px;
 }
 
 @media (prefers-color-scheme: dark) {
