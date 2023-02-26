@@ -1,16 +1,14 @@
 {{- define "main" }}
-{{ partial "breadcrumb.html" . }}
 <main>
 {{- if .Content }}
 {{ .Content }}
 {{- end }}
 {{- range .Pages }}
-<div class="box">
     <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
     <time datetime="{{ .Date }}">{{ .Date | time.Format .Site.Params.dateFormat }}</time><br>
-    <span>{{ .WordCount }} words / {{ math.Round (math.Div (.WordCount) 110.0) }} minutes</span><br>
+    <span>{{ .WordCount }} words</span><br>
     <span>{{ partial "tags.html" . }}</span>
-</div>
+    <hr>
 {{- end }}
 </main>
 {{- end }}

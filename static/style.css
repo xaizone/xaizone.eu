@@ -2,8 +2,8 @@ body {
     background: #fff;
     color: #000;
     font-family: monospace;
-    font-size: 14px;
-    max-width: 35rem;
+    font-size: 16px;
+    max-width: 40rem;
     margin: 0 auto;
     padding: 1rem;
 }
@@ -21,7 +21,7 @@ body {
 hr {
     max-width: 100%;
     border: 1px dashed;
-    margin-block: 2rem;
+    margin-block: 1rem;
 }
 
 code {
@@ -29,7 +29,8 @@ code {
 }
 
 code:not([class]) {
-    background-color: #ccc;
+    background-color: #000;
+    color: #fff
 }
 
 img {
@@ -57,10 +58,28 @@ a:hover {
     color: #05f;
 }
 
+.breadcrumb {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding: 0;
+}
+
+.breadcrumb li {
+    display: inline;
+    word-wrap: break-word;
+}
+
+.breadcrumb li + li:before {
+    content: "> ";
+    padding-left: 10px;
+}
+
 @media (prefers-color-scheme: dark) {
     body { background: #111; color: #ccc; }
     a:link, a:visited { color: #9bf; }
     a:hover { color: #9df; }
     .box { border-color: #bbb; }
-    code:not([class]) { color: #000; }
+    code:not([class]) { background: #ccc; color: #000; }
 }

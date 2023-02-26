@@ -4,9 +4,8 @@
 {{ partial "head.html" . }}
 </head>
 <body>
+{{- if not .IsHome }}{{ partial "breadcrumb.html" . }}{{- end }}
 {{- block "main" . }}{{- end }}
-{{ if ne .Page.Kind "taxonomy" }}
-{{ partial "footer.html" . }}
-{{- end }}
+{{ if ne .Page.Kind "taxonomy" }}{{ partial "footer.html" . }}{{- end }}
 </body>
 </html>

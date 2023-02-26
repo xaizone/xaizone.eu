@@ -1,13 +1,21 @@
 <nav>
-<h3>
-{{- $url := replace .Permalink ( printf "%s" .Site.BaseURL ) "" }}
-<a href="{{ .Site.BaseURL | relURL }}">{{ .Site.Title }}</a>/
-{{- range $index, $element := split $url "/" }}
-    {{- $.Scratch.Add "path" $element }}
-    {{- if ne $element "" -}}
-        <a href="/{{ $.Scratch.Get "path" }}/">{{ . }}</a>/
-        {{- $.Scratch.Add "path" "/" -}}
-    {{- end -}}
-{{- end -}}
-</h3>
+    <ul class="breadcrumb">
+        {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+    </ul>
 </nav>
+<hr>
+  
+{{ define "breadcrumbnav" }}
+    {{ if .p1.Parent }}
+        {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )}}
+    {{ else if not .p1.IsHome }}
+        {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )}}
+    {{ end }}
+    <li>
+        {{ if ne .p1 .p2 }}
+            <a href="{{ .p1.RelPermalink }}">{{ .p1.Title }}</a>
+        {{ else }}
+            <span>{{ .p1.Title }}</span>
+        {{ end }}
+    </li>
+{{ end }}
