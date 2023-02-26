@@ -2,6 +2,7 @@
 <header>
     <h1>{{ .Title }}</h1>
     <span><time datetime="{{ .Date }}">{{ .Date | time.Format .Site.Params.dateFormat }}</time></span> / <span>{{ .WordCount }} words</span> / <span>{{ partial "tags.html" . }}</span>
+    <hr>
 </header>
 <main>
 <article>
