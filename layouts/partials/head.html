@@ -17,5 +17,4 @@
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink | safeURL }}">
 {{- end }}
 
-{{ partial "opengraph.html" . }}
-{{ partial "twitter.html" . }}
+{{ partial "seo.html" . }}
