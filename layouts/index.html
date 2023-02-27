@@ -3,33 +3,29 @@
 <h1 class="center">{{ .Title }}</h1>
 </header>
 <main>
-<div class="box">
-    <span>remote:</span>
-    <a href="ircs://irc.libera.chat/xaizone">irc</a>
-    <a href="https://github.com/xaizone">github</a>
-</div>
-
-<div class="box">
+<hr>
+<span>remote:</span>
+<a href="ircs://irc.libera.chat/xaizone">irc</a>
+<a href="https://github.com/xaizone">github</a>
+<hr>
 <span>recent writing:</span>
-<ul>
+<ul class="list">
 {{- range first .Site.Params.postLimit .Site.RegularPages }}
 <li>
-    <a href="{{ .RelPermalink }}">{{ .Date | time.Format .Site.Params.dateFormat }}: {{ lower .Title }}</a>
+    {{ .Date | time.Format "2006/01/02" }} <a href="{{ .RelPermalink }}">{{ lower .Title }}</a>
 </li>
 {{- end }}
 <li>
     <a href="{{ "/post" | relURL }}">...</a>
 </li>
 </ul>
-</div>
-
-<div class="box">
+<hr>
     <a href="{{ "/tags" | relURL }}">tags</a>:
     {{- range $name, $taxonomy := .Site.Taxonomies.tags }}
     {{- with $.Site.GetPage (printf "/tags/%s" $name) }}
         <a href={{ .RelPermalink }}>{{ $name }}</a>
     {{- end }}
     {{- end -}}
-</div>
 </main>
+<hr>
 {{- end }}
