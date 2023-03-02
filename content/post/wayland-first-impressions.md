@@ -4,6 +4,7 @@ date: 2023-02-28T21:41:59+01:00
 tags:
   - me
   - linux
+  - software
 description: "Wayland/Hyprland First Impressions."
 ---
 
