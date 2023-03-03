@@ -1,14 +1,14 @@
 {{- define "main" }}
 <main>
-{{- if .Content }}
 {{ .Content }}
-{{- end }}
 {{- range .Pages }}
+<section>
     <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
     <time datetime="{{ .Date }}">{{ .Date | time.Format .Site.Params.dateFormat }}</time><br>
     <span>{{ .WordCount }} words</span><br>
     <span>{{ partial "tags.html" . }}</span>
     <hr>
+</section>
 {{- end }}
 </main>
 {{- end }}

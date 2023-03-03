@@ -1,31 +1,35 @@
 {{ define "main" }}
 <header>
 <h1 class="center">{{ .Title }}</h1>
+<hr>
 </header>
 <main>
-<hr>
+<section>
 <span>remote:</span>
 <a href="ircs://irc.libera.chat/xaizone">irc</a>
 <a href="https://github.com/xaizone">github</a>
 <hr>
+</section>
+<section>
 <span>recent writing:</span>
 <ul class="list">
 {{- range first .Site.Params.postLimit .Site.RegularPages }}
 <li>
-    {{ .Date | time.Format "2006/01/02" }} <a href="{{ .RelPermalink }}">{{ lower .Title }}</a>
+    {{- .Date | time.Format "2006/01/02" }} <a href="{{ .RelPermalink }}">{{ lower .Title }}</a>
 </li>
 {{- end }}
-<li>
-    <a href="{{ "/post" | relURL }}">...</a>
-</li>
+<li><a href="{{ "/post" | relURL }}">...</a></li>
 </ul>
 <hr>
-    <a href="{{ "/tags" | relURL }}">tags</a>:
-    {{- range $name, $taxonomy := .Site.Taxonomies.tags }}
-    {{- with $.Site.GetPage (printf "/tags/%s" $name) }}
-        <a href={{ .RelPermalink }}>{{ $name }}</a>
-    {{- end }}
-    {{- end -}}
-</main>
+</section>
+<section>
+<span><a href="{{ "/tags" | relURL }}">tags</a>:</span>
+{{- range $name, $taxonomy := .Site.Taxonomies.tags }}
+{{- with $.Site.GetPage (printf "/tags/%s" $name) }}
+    <a href={{ .RelPermalink }}>{{ $name }}</a>
+{{- end }}
+{{- end -}}
 <hr>
+</section>
+</main>
 {{- end }}

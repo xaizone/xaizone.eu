@@ -1,10 +1,10 @@
 {{- define "main" }}
 <main>
-{{- if .Content }}
 {{ .Content }}
-{{- end }}
+<section>
 {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-    <a href="/tags/{{ $name | urlize }}/">{{ $name }}</a><sup>{{ $taxonomy.Count }}</sup>
+    <span><a href="/tags/{{ $name | urlize }}/">{{ $name }}</a><sup>{{ $taxonomy.Count }}</sup></span>
 {{- end }}
+</section>
 </main>
 {{- end }}

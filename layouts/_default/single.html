@@ -1,13 +1,13 @@
 {{- define "main" }}
 <header>
     <h1>{{ .Title }}</h1>
-    <span><time datetime="{{ .Date }}">{{ .Date | time.Format .Site.Params.dateFormat }}</time></span> / <span>{{ .WordCount }} words</span> / <span>{{ partial "tags.html" . }}</span>
+    <span><time datetime="{{ .Date }}">{{ .Date | time.Format .Site.Params.dateFormat }}</time> / {{ .WordCount }} words / {{ partial "tags.html" . }}</span>
     <hr>
 </header>
 <main>
 <article>
 {{ .Content }}
+<hr>
 </article>
 </main>
-<hr>
 {{- end }}
