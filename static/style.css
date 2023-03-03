@@ -17,6 +17,10 @@ h1 {
     margin-block: 0.4rem;
 }
 
+p {
+    line-height: 1.4;
+}
+
 hr {
     max-width: 100%;
     border: 1px solid #aaa;
