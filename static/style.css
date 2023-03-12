@@ -42,6 +42,10 @@ img {
     margin: auto;
 }
 
+p > code {
+    padding: 0.1rem;
+}
+
 pre code {
     display: block;
     padding: 1rem;
