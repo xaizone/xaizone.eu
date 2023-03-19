@@ -65,6 +65,10 @@ a:hover {
     color: #05f;
 }
 
+article {
+    text-align: justify;
+}
+
 .list {
     list-style: none;
     display: flex;
