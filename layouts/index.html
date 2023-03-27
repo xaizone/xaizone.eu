@@ -26,9 +26,7 @@
 <span>recent writing:</span>
 <ul class="list">
 {{- range first .Site.Params.postLimit .Site.RegularPages }}
-<li>
-    {{- .Date | time.Format "2006/01/02" }} <a href="{{ .RelPermalink }}">{{ lower .Title }}</a>
-</li>
+<li><time datetime="{{ .Date }}">{{- .Date | time.Format "2006/01/02" }}</time> <a href="{{ .RelPermalink }}">{{ lower .Title }}</a></li>
 {{- end }}
 <li><a href="{{ "/post" | relURL }}">...</a></li>
 </ul>
