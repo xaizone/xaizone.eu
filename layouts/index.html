@@ -10,6 +10,18 @@
 <a href="https://github.com/xaizone">github</a>
 <hr>
 </section>
+{{- range where .Site.RegularPages "Params.pin" true -}}
+<section>
+<span>pinned writing:</span>
+<ul class="list">
+{{- range where .Site.RegularPages "Params.pin" true -}}
+<li><a href="{{ .RelPermalink }}">{{ lower .Title }}</a></li>
+{{- end -}}
+</ul>
+<hr>
+</section>
+{{- break -}}
+{{- end -}}
 <section>
 <span>recent writing:</span>
 <ul class="list">

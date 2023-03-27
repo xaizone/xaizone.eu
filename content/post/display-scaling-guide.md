@@ -6,6 +6,7 @@ tags:
   - software
   - gaming
 description: "Force your display to scale non-native resolutions using CRU (Custom Resolution Utility)."
+pin: true
 ---
 
 `DISLAIMER: If your monitor has G-SYNC and you would like to setup display scaling with the help of this guide, keep in mind that you will at best only be able to use common resolutions, such as 1280x720, due to the limitation of predefined resolutions in the G-SYNC module.`
