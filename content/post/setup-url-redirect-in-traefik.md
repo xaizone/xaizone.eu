@@ -59,9 +59,9 @@ http:
         certresolver: cloudflare 
 ```
 
-And that's it!
+And that's it! Traefik will now redirect all requests from your old domain (example.com, *.example.com) to your new domain (new-example.com).
 
-Traefik will now redirect all requests from your old domain (example.com, *.example.com) to your new domain (new-example.com).
+I've included an example of the Traefik dynamic configuration file below.
 
 ```yml
 # final example of dynamic configuration file
@@ -88,9 +88,3 @@ http:
         # new domain redirect
         replacement: "https://new-example.com"
 ```
-
----
-
-Sources: 
-- [Traefik Docs](https://doc.traefik.io/traefik/)
-- [Traefik Labs Forum](https://community.traefik.io/t/redirect-to-external-site-without-service/9984/)
