@@ -1,11 +1,24 @@
 body {
     background: #fff;
     color: #000;
-    font-family: monospace;
+    font-family: monospace, monospace;
     font-size: 14px;
     max-width: 35rem;
     margin: 0 auto;
     padding: 1rem;
+}
+
+sup {
+    vertical-align: baseline;
+    font-size: inherit;
+}
+
+sup::before {
+    content: ' (';
+}
+
+sup::after {
+    content: ')';
 }
 
 h1 {
@@ -18,13 +31,9 @@ p {
 }
 
 hr {
-    max-width: 100%;
-    border: 1px solid #aaa;
-    margin-block: 1rem;
-}
-
-code {
-    white-space: pre-wrap;
+    border: 0;
+    border-bottom: 1px solid #aaa;
+    margin-block: 0.5rem;
 }
 
 code:not([class]) {
