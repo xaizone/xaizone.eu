@@ -88,7 +88,7 @@ article {
     flex-wrap: wrap;
     flex-direction: column;
     padding: 0;
-    margin-top: 0.25rem;
+    margin-block: 0.25rem;
 }
 
 .list li {
