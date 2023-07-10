@@ -38,6 +38,7 @@ hr {
 
 code {
     white-space: pre-wrap;
+    word-break: break-word;
 }
 
 code:not([class]) {
@@ -49,10 +50,6 @@ img {
     max-width: 100%;
     display: block;
     margin: auto;
-}
-
-p > code {
-    padding: 0.1rem;
 }
 
 pre code {
@@ -68,14 +65,12 @@ blockquote {
 
 a:link, a:visited {
     color: #00e;
+    text-decoration: none;
 }
 
 a:hover {
     color: #05f;
-}
-
-article {
-    text-align: justify;
+    text-decoration: underline;
 }
 
 .center {
@@ -83,7 +78,7 @@ article {
 }
 
 .list {
-    list-style: none;
+    list-style: square;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -97,8 +92,8 @@ article {
 }
 
 .list li:before {
-    content: "└─";
-    padding-inline: 0.5rem;
+    content: "-";
+    padding-right: 0.5rem;
 }
 
 .breadcrumb {

@@ -1,15 +1,9 @@
 {{ define "main" }}
 <header>
-<h1 class="center">{{ .Title }}</h1>
+<a href="{{ .Site.BaseURL }}">{{ .Title }}</a>
 <hr>
 </header>
 <main>
-<section>
-<span>remote:</span>
-<a href="ircs://irc.libera.chat/xaizone">irc</a>
-<a href="https://github.com/xaizone">github</a>
-<hr>
-</section>
 {{- range where .Site.RegularPages "Params.pin" true -}}
 <section>
 <span>pinned writing:</span>
@@ -26,9 +20,9 @@
 <span>recent writing:</span>
 <ul class="list">
 {{- range first .Site.Params.postLimit .Site.RegularPages }}
-<li><time datetime="{{ .Date }}">{{- .Date | time.Format "2006/01/02" }}</time> <a href="{{ .RelPermalink }}">{{ lower .Title }}</a></li>
+<li><time datetime="{{ .Date }}">{{- .Date | time.Format "2006/01/02" }}</time>: <a href="{{ .RelPermalink }}">{{ lower .Title }}</a></li>
 {{- end }}
-<li><a href="{{ "/post" | relURL }}">...</a></li>
+<li><a href="{{ "/post" | relURL }}">see all posts</a></li>
 </ul>
 <hr>
 </section>

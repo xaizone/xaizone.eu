@@ -11,7 +11,7 @@ params:
   dateFormat: '2006-01-02'
   favicon: 'favicon.svg'
   stylesheet: 'style.css'
-  postLimit: 8
+  postLimit: 7
   description: 'personal website of xaizone; a simple blog with good intentions'
   author: xaizone
 
