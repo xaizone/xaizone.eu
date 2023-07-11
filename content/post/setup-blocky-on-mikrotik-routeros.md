@@ -80,7 +80,7 @@ After you've successfully uploaded your config to the router, all you have to do
 
 *(if you have multiple containers setup, replace 0 with the correct container id - use `/container/print` to figure that out)*
 
-Container is successfully running, but you are not using your Blocky DNS yet, to set this up I use [destination NAT](https://help.mikrotik.com/docs/display/ROS/Container#Container-Forwardportstointernalcontainer) from LAN (bridge-1) port 53 to port 6969, both for UDP and TCP. To start using your Blocky DNS, run these commands. Make sure to replace `<router-ip>` accordingly.
+Container is successfully running, but you are not using your Blocky DNS yet, to set this up I use [destination NAT](https://help.mikrotik.com/docs/display/ROS/Container#Container-Forwardportstointernalcontainer) from LAN (bridge-1) port 53 to 172.17.0.2 (Blocky Container) port 6969, both for UDP and TCP. To start using your Blocky DNS, run these commands. Make sure to replace `<router-ip>` accordingly.
 
 ```properties
 /ip firewall nat add action=dst-nat chain=dstnat dst-port=53 in-interface=bridge-1 protocol=udp to-addresses=172.17.0.2 to-ports=6969
