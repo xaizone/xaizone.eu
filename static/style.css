@@ -63,6 +63,10 @@ blockquote {
     text-align: center;
 }
 
+a {
+    word-wrap: break-word;
+}
+
 a:link, a:visited {
     color: #00e;
     text-decoration: none;
