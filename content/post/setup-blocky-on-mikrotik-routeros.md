@@ -22,8 +22,8 @@ RouterOS setup:
 ```properties
 /interface/bridge/add name=containers
 /ip/address/add address=172.17.0.1/24 interface=containers
-/interface/bridge/port add bridge=containers interface=veth1
 /interface/veth/add name=veth1 address=172.17.0.2/24 gateway=172.17.0.1
+/interface/bridge/port add bridge=containers interface=veth1
 /ip/firewall/nat/add chain=srcnat action=masquerade src-address=172.17.0.0/24
 /container/config/set registry-url=https://registry-1.docker.io tmpdir=docker/temp
 /container/add remote-image=spx01/blocky:latest interface=veth1 root-dir=docker/blocky start-on-boot=yes logging=yes
