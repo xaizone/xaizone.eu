@@ -5,7 +5,7 @@ enableRobotsTXT: true
 
 markup:
   highlight:
-    style: native
+    codeFences: false
 
 params:
   dateFormat: '2006-01-02'

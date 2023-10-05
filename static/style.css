@@ -39,9 +39,6 @@ hr {
 code {
     white-space: pre-wrap;
     word-break: break-word;
-}
-
-code:not([class]) {
     background-color: #000;
     color: #fff
 }
@@ -54,8 +51,8 @@ img {
 
 pre code {
     display: block;
-    padding: 1rem;
-    word-wrap: anywhere;
+    padding: 0.7rem;
+    word-wrap: break-word;
 }
 
 blockquote {
@@ -120,9 +117,9 @@ a:hover {
 }
 
 @media (prefers-color-scheme: dark) {
-    body { background: #111; color: #ccc; }
+    body { background: #111; color: #ddd; }
     a:link, a:visited { color: #9bf; }
     a:hover { color: #9df; }
-    code:not([class]) { background: #ccc; color: #000; }
+    code { background: #ddd; color: #000; }
     hr { border-color: #666; }
 }
