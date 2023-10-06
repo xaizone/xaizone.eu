@@ -1,7 +1,7 @@
 body {
     background: #fff;
     color: #000;
-    font-family: monospace, monospace;
+    font-family: monospace;
     font-size: 14px;
     max-width: 35rem;
     margin: 0 auto;
@@ -74,7 +74,7 @@ a:hover {
     text-decoration: underline;
 }
 
-.center {
+footer {
     text-align: center;
 }
 
@@ -87,7 +87,7 @@ a:hover {
     margin-block: 0.25rem;
 }
 
-.list li {
+.list li, .breadcrumb li {
     display: inline;
     word-wrap: break-word;
 }
@@ -104,11 +104,6 @@ a:hover {
     align-items: baseline;
     padding: 0;
     margin: 0;
-}
-
-.breadcrumb li {
-    display: inline;
-    word-wrap: break-word;
 }
 
 .breadcrumb li + li:before {
