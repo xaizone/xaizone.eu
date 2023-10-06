@@ -39,8 +39,8 @@ hr {
 code {
     white-space: pre-wrap;
     word-break: break-word;
-    background-color: #000;
-    color: #fff
+    background-color: #eee;
+    color: #000;
 }
 
 img {
@@ -51,7 +51,7 @@ img {
 
 pre code {
     display: block;
-    padding: 0.7rem;
+    padding: 0.4rem 0.7rem;
     word-wrap: break-word;
 }
 
@@ -120,6 +120,6 @@ a:hover {
     body { background: #111; color: #ddd; }
     a:link, a:visited { color: #9bf; }
     a:hover { color: #9df; }
-    code { background: #ddd; color: #000; }
+    code { background: #222; color: #ddd; }
     hr { border-color: #666; }
 }
