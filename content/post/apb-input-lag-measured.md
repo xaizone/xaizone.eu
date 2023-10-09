@@ -3,7 +3,7 @@ title: "APB Reloaded Input Lag Measured"
 date: 2023-10-08T20:23:47+02:00
 tags:
   - gaming
-description: "I tested APB Reloaded input latency difference between double buffering ON and OFF."
+description: "I tested APB Reloaded's input latency difference between double buffering ON and OFF."
 ---
 
 Hey,
@@ -11,7 +11,7 @@ Hey,
 I recently got a new monitor, the Asus PG27AQN, which conveniently also includes the NVIDIA Reflex Latency Analyzer tool. A built-in tool which to some extend replaces the NVIDIA LDAT, it only measures the PC + Display latency, not the whole system latency (unless you have supported mice and you are on NVIDIA). This APB Reloaded latency test was my first experimentation with this technology, so until I refine my testing methodology you should take this stuff with a grain of salt. 
 
 Setup:
-- CPU: CPU: AMD Ryzen 7 7800X3D @ PBO -20
+- CPU: AMD Ryzen 7 7800X3D @ PBO -20
 - GPU: ASROCK Radeon RX 7900 XTX Phantom Gaming 24GB OC
 - RAM: Patriot Viper Xtreme 5 RGB (2 x 16 GB) DDR5-7600 CL36 @ 6200MHz 30-36-36-30
 - Monitor: Asus ROG Swift 360Hz PG27AQN @ 1440p360, ULMB2 PW 100
