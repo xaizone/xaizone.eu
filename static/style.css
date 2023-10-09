@@ -78,6 +78,10 @@ footer {
     text-align: center;
 }
 
+ul:not([class]) > li {
+    margin-block: 0.2rem;
+}
+
 .list {
     list-style: none;
     display: flex;
