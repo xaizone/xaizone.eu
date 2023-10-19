@@ -4,6 +4,7 @@ date: 2023-10-08T20:23:47+02:00
 tags:
   - gaming
 description: "I tested APB Reloaded's input latency difference between double buffering ON and OFF."
+pin: true
 ---
 
 Hey,
