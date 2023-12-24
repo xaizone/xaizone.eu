@@ -3,7 +3,7 @@
 {{ .Content }}
 <section>
 {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-    <span><a href="/tags/{{ $name | urlize }}/">{{ $name }}</a><sup>{{ $taxonomy.Count }}</sup></span>
+    <span><a href="/tags/{{ $name | urlize }}/">{{ $name }}</a> ({{ $taxonomy.Count }})</span>
 {{- end }}
 </section>
 </main>

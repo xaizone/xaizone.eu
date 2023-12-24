@@ -8,19 +8,6 @@ body {
     padding: 1rem;
 }
 
-sup {
-    vertical-align: baseline;
-    font-size: inherit;
-}
-
-sup::before {
-    content: ' (';
-}
-
-sup::after {
-    content: ')';
-}
-
 h1 {
     font-size: 28px;
     margin-block: 0.4rem;
