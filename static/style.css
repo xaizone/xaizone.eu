@@ -115,10 +115,19 @@ ul:not([class]) > li {
     padding-inline: 0.5rem;
 }
 
+.ascii {
+    display:flex;
+    justify-content:center;
+}
+
 @media (prefers-color-scheme: dark) {
     body { background: #111; color: #ddd; }
     a:link, a:visited { color: #9bf; }
     a:hover { color: #9df; }
     code { background: #222; color: #ddd; }
     hr { border-color: #666; }
+}
+
+@media screen and (max-width: 35rem){
+    .ascii { display: none; }
 }
