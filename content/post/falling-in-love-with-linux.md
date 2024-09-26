@@ -3,8 +3,6 @@ title: "Falling in Love With Linux"
 date: 2022-11-21T20:23:12+01:00
 tags:
   - linux
-  - me
-  - software
 description: "How I fell in love with Linux after being a hardcore gamer for over a decade."
 ---
 

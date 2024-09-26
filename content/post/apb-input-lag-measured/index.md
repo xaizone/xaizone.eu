@@ -28,7 +28,7 @@ Game specific information:
 Glossary:
 - DB = Double Buffering
 
-You are able to download these findings as an ODF Spreadsheet here - [apb-input-latency.ods](/doc/apb-input-latency.ods)
+You are able to download these findings as an ODF Spreadsheet here - [apb-input-latency.ods](apb-input-latency.ods)
 
 I extracted the most important values from the test in the table below. You can find more useful information in the sheet itself.
 

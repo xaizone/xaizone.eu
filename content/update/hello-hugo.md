@@ -2,8 +2,7 @@
 title: "Hello Hugo"
 date: 2022-11-06T19:34:50+01:00
 tags:
-  - web
-  - software
+- update
 description: "I switched away from Jekyll to Hugo and some other info."
 ---
 

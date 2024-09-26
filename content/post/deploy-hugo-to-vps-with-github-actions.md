@@ -3,7 +3,6 @@ title: "Deploy Hugo to VPS With GitHub Actions"
 date: 2023-02-23T10:43:22+01:00
 tags:
   - guide
-  - software
   - web
 description: "Easily deploy your Hugo project to your VPS with GitHub Actions."
 ---

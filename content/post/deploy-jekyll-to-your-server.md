@@ -3,7 +3,6 @@ title: "Easy way to deploy Jekyll site to your server using GitHub Actions"
 date: 2022-02-19
 tags:
   - guide
-  - software
   - web
 description: "Deploy a Jekyll website to your own server with ease using GitHub Actions."
 ---

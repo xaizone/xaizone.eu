@@ -2,7 +2,6 @@
 title: "APB Reloaded 1.30 (64-Bit) Thoughts"
 date: 2023-02-12T12:08:30+01:00
 tags:
-  - me
   - gaming
   - review
 description: "My thoughts about APB Reloaded 1.30 (64-Bit) and why i don't think it's the resurrection of the game."

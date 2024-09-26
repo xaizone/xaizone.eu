@@ -3,13 +3,12 @@ title: "Display Scaling Guide"
 date: 2022-11-04
 tags: 
   - guide
-  - software
   - gaming
 description: "Force your display to scale non-native resolutions using CRU (Custom Resolution Utility)."
 pin: true
 ---
 
-`DISLAIMER: If your monitor has G-SYNC and you would like to setup display scaling with the help of this guide, keep in mind that you will at best only be able to use common resolutions, such as 1280x720, due to the limitation of predefined resolutions in the G-SYNC module.`
+`DISLAIMER: If your monitor has a physical G-SYNC module you will most likely not be able to setup display scaling, at least that was my case with the PG27AQN. Don't get this messed up with "G-SYNC Compatible", you are able to setup display scaling with such monitors without any issues.`
 
 This guide will cover how to make your monitor scale non-native resolutions instead of your GPU, which will result in sharper image[^3] and negligible[^1] latency improvement. Setting this up can also fix the issue with games changing your monitor's refresh rate.
 
@@ -20,7 +19,7 @@ Plus:
 
 Minus:
 - Longer Alt+Tab[^2]
-- Might not work if your monitor has G-SYNC (read above)
+- Doesn't work on monitors with physical G-SYNC module (read disclaimer above)
 
 Prerequisites:
 - [CRU (Custom Resolution Utility)](https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU)
@@ -29,7 +28,7 @@ Download Custom Resolution Utility (further only as CRU) and extract it. The arc
 
 Open CRU, click and open the Default extension block at the lower half of the program and you will see a list of resolutions: 
 
-![Default Extension Block in CRU](/img/CRU_2jXjoOW4pJ.webp)
+![Default Extension Block in CRU](cru1.webp "Default Extension Block in CRU")
 
 `If the resolution you want to use is above 655.35 MHz pixel clock (~280hz @ 1080P), you will have to add your resolutions in an extension block - Display ID 1.3 (or 2.0)`[^5]
 
@@ -39,7 +38,7 @@ Now you can delete other resolutions and/or unnecessary extension blocks. Only k
 
 Now add the resolution you play on in the detailed resolutions tab (or extension block as described above) and use timing - `Exact reduced`:
 
-![Adding Non-Native Resolution in CRU](/img/CRU_xkrhtsmLgl.webp)
+![Adding Non-Native Resolution in CRU](cru2.webp "Adding Non-Native Resolution in CRU")
 
 Exit out of CRU by clicking OK and run `restart64.exe`[^4] as an administrator, if anything goes wrong and you don't see any image press `F8`. This will make your monitor switch into safe mode and you will be able to adjust the settings or reset[^4] back to the defaults.
 
@@ -49,7 +48,7 @@ Use your monitor's OSD to change the way the image gets scaled. You can usually 
 
 Tip:[^2] If you hate the longer Alt+Tab times, you can completely eliminate this extra delay by changing your desktop resolution to the one you are using in-game. Read the footnote for more information.
 
-![Final CRU Setup Example](/img/CRU_example.webp)
+![Final CRU Setup Example](cru3.webp "Final CRU Setup Example")
 
 If you are still struggling with getting display scaling to work, try reading through the thread on Monitor Tests forums or watch this YouTube video made by [KajzerD](https://www.youtube.com/c/KajzerD), I've included both below.
 

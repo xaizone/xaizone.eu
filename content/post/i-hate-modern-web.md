@@ -3,7 +3,7 @@ title: "I Hate Modern Web"
 date: 2022-12-02T14:14:13+01:00
 tags:
   - web
-  - me
+  - rant
 description: "I absolutely hate the modern web. Am I the weird one?"
 ---
 

@@ -2,8 +2,7 @@
 title: "How Lazygit Changed My Git Life"
 date: 2023-07-01T19:12:17+02:00
 tags:
-  - me
-  - software
+  - linux
 description: "How Lazygit changed the way I work with Git."
 ---
 

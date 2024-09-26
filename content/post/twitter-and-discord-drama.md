@@ -3,7 +3,7 @@ title: "Twitter and Discord Drama"
 date: 2022-11-18T13:45:49+01:00
 tags:
   - web
-  - me
+  - rant
 description: "My thoughts about the recent Twitter and Discord drama."
 ---
 

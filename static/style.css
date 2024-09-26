@@ -65,6 +65,12 @@ footer {
     text-align: center;
 }
 
+figcaption {
+    text-align: center;
+    padding: 0.4rem;
+    font-style: italic;
+}
+
 ul:not([class]) > li {
     margin-block: 0.2rem;
 }

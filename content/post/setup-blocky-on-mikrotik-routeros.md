@@ -3,7 +3,6 @@ title: "Setup Blocky on MikroTik RouterOS"
 date: 2023-07-10T20:24:02+02:00
 tags:
   - guide
-  - software
   - docker
 description: "How to setup Blocky (DNS proxy and ad-blocker written in Go) inside MikroTik RouterOS Containers."
 ---

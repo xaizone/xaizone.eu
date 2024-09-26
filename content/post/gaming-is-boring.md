@@ -3,7 +3,7 @@ title: "Gaming Is Boring"
 date: 2022-11-06T19:59:10+01:00
 tags:
   - gaming
-  - me
+  - rant
 description: "Gaming Is Boring (... Well not Really)"
 ---
 

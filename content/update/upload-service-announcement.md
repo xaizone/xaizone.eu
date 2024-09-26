@@ -2,8 +2,7 @@
 title: "Upload Service Announcement"
 date: 2022-11-26T19:38:11+01:00
 tags:
-  - web
-  - update
+- update
 description: "Announcement of xai.zone upload service. THAT f*cking upload service."
 ---
 

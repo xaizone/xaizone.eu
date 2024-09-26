@@ -12,9 +12,9 @@
     {{- end -}}
     <li>
         {{- if ne .p1 .p2 -}}
-            <a href="{{ .p1.RelPermalink }}">{{ .p1.Title }}</a>
+            <a href="{{ .p1.RelPermalink }}">{{ lower .p1.Title }}</a>
         {{- else -}}
-            <span>{{ .p1.Title }}</span>
+            <span>{{ lower .p1.Title }}</span>
         {{- end -}}
     </li>
 {{- end }}

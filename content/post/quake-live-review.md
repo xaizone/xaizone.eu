@@ -2,7 +2,6 @@
 title: "Quake Live Review"
 date: 2023-01-29T12:00:51+01:00
 tags:
-  - me
   - gaming
   - review
 description: "My thoughts about Quake Live and why I think it's the best FPS game ever made."

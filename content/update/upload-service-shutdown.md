@@ -2,8 +2,7 @@
 title: "Upload Service Shutdown"
 date: 2023-11-28T18:51:59+01:00
 tags:
-  - web
-  - update
+- update
 description: "Shutdown of my public upload service"
 ---
 

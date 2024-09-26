@@ -3,7 +3,6 @@ title: "The Beauty of IRC In Modern Internet Era"
 date: 2022-11-10T14:29:04+01:00
 tags:
   - web
-  - software
 description: "IRC (Internet Relay Chat) is amazing and here's why you should use it as well."
 ---
 
