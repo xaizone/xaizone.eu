@@ -8,15 +8,21 @@ tags:
 description:
 ---
 
+What's inside the box:
+-
+
 Specifications:
 - Length: cm
 - Width: cm
 - Height: cm
 - Weight: g
 - Sensor:
+- Main Switches:
+- Encoder:
+- Preferred Grip Style:
 
-Plus:
+Pros:
 -
 
-Minus:
+Cons:
 -
