@@ -1,0 +1,142 @@
+{{- define "main" }}
+<header>
+<h1>{{ .Title }}</h1>
+<hr>
+</header>
+<main>
+  <article>
+    {{- $scratch := newScratch -}}
+    {{- $posts := where site.RegularPages "Type" "post" -}}
+    {{- $updates := where site.RegularPages "Type" "update" -}}
+
+    <!-- first article -->
+    {{- range last 1 $posts -}}
+      {{- $firstDate := .Date.Format "January 2, 2006" -}}
+      {{- $scratch.Set "firstDatePost" $firstDate -}}
+    {{- end -}}
+
+    <!-- first announcement -->
+    {{- range last 1 $updates -}}
+        {{- $firstDate := .Date.Format "January 2, 2006" -}}
+        {{- $scratch.Set "firstDateUpdate" $firstDate -}}
+    {{- end -}}
+
+    <!-- latest article -->
+    {{- range first 1 $posts -}}
+      {{- $latestDate := .Date.Format "January 2, 2006" -}}
+      {{- $scratch.Set "latestDatePost" $latestDate -}}
+    {{- end -}}
+
+    <!-- latest update -->
+    {{- range first 1 $updates -}}
+        {{- $latestDate := .Date.Format "January 2, 2006" -}}
+        {{- $scratch.Set "latestDateUpdate" $latestDate -}}
+    {{- end -}}
+
+    {{- $postCount := len $posts -}}
+    {{- $updateCount := len $updates -}}
+    {{- $sumCount := add $postCount $updateCount -}}
+
+    <p>
+      My most recent article was written on <strong>{{ $scratch.Get "latestDatePost" }}</strong>
+      with my first ever one written on <strong>{{ $scratch.Get "firstDatePost" }}</strong>. 
+      My most recent announcement was written on <strong>{{ $scratch.Get "latestDateUpdate" }}</strong>
+      with my first ever one written on <strong>{{ $scratch.Get "firstDateUpdate" }}</strong>.
+      Over these years I have written a total of <strong>{{ $postCount }}</strong> posts and <strong>{{ $updateCount }}</strong> announcements.
+    </p>
+    <div>
+      {{- $tags := .Site.Taxonomies.tags -}}
+
+      {{- $scratch.Set "longCountPost" 0 -}}
+      {{- range $posts -}}
+        <!-- sum all words in articles for average calculation -->
+        {{ $scratch.Add "wordCountPost" .WordCount }}
+        <!-- find the longest post -->
+        {{- if ge .WordCount ($scratch.Get "longCountPost") -}}
+            {{- $scratch.Set "longestPost" . -}}
+            {{- $scratch.Set "longCountPost" .WordCount -}}
+        {{- end -}}
+      {{- end -}}
+
+      {{- $scratch.Set "longCountUpdate" 0 -}}
+      {{- range $updates -}}
+        <!-- sum all words in updates for average calculation -->
+        {{ $scratch.Add "wordCountUpdate" .WordCount }}
+        <!-- find the longest update -->
+        {{- if ge .WordCount ($scratch.Get "longCountUpdate") -}}
+          {{- $scratch.Set "longestUpdate" . -}}
+          {{- $scratch.Set "longCountUpdate" .WordCount -}}
+        {{- end -}}
+      {{- end -}}
+
+      <!-- most popular tag used -->
+      {{- $mostPopularTag := index .Site.Taxonomies.tags.ByCount 0 -}}
+
+      {{- $wordCountPost := $scratch.Get "wordCountPost" -}}
+      {{- $wordCountUpdate := $scratch.Get "wordCountUpdate" -}}
+      {{- $sumWordCount := add $wordCountPost $wordCountUpdate -}}
+
+      {{- $avgPostLength := div $wordCountPost $postCount -}}
+      {{- $avgUpdateLength := div $wordCountUpdate $updateCount -}}
+      {{- $sumAvgLength := div $sumWordCount $sumCount -}}
+      <table>
+        <tr>
+          <td width="40%">Total words written</td>
+          <td width="60%">{{- $sumWordCount | lang.FormatNumberCustom 0 -}}</td>
+        </tr>
+        <tr>
+          <td>in articles</td>
+          <td>{{- $wordCountPost | lang.FormatNumberCustom 0 -}}</td>
+        </tr>
+        <tr>
+          <td>in announcements</td>
+          <td>{{- $wordCountUpdate | lang.FormatNumberCustom 0 -}}</td>
+        </tr>
+        <tr height="14px"></tr>
+        <tr>
+          <td>Total avg. words</td>
+          <td>{{- $sumAvgLength | lang.FormatNumberCustom 0 -}}</td>
+          </tr>
+        <tr>
+          <td>in articles</td>
+          <td>{{- $avgPostLength | lang.FormatNumberCustom 0 -}}</td>
+        </tr>
+        <tr>
+          <td>in announcements</td>
+          <td>{{- $avgUpdateLength | lang.FormatNumberCustom 0 -}}</td>
+        </tr>
+        <tr height="14px"></tr>
+        <tr>
+          <td>Number of tags</td>
+          <td><a href="{{ "/tags" | relURL }}">{{- len $tags | lang.FormatNumberCustom 0 -}}</a></td>
+        </tr>
+        <tr>
+          <td>Most popular tag</td>
+          <td>
+             {{- with $mostPopularTag -}}
+                <a href="{{ .Page.Permalink }}">{{- .Page.Title -}}</a> with {{ .Count }} posts
+             {{- end -}}
+          </td>
+        </tr>
+        <tr>
+          <td>Longest article</td>
+          <td>
+            {{- with $scratch.Get "longestPost" -}}
+            <a href="{{ .Permalink }}">{{- .Title -}}</a> with {{ .WordCount }} words
+            {{- end -}}
+          </td>
+        </tr>
+        <tr>
+          <td>Longest announcement</td>
+          <td>
+            {{- with $scratch.Get "longestUpdate" -}}
+            <a href="{{ .Permalink }}">{{- .Title -}}</a> with {{ .WordCount }} words
+            {{- end -}}
+          </td>
+        </tr>
+      </table>
+    </div>
+    <hr>
+  </article>
+</main>
+{{ end }}

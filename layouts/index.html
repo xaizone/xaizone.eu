@@ -4,6 +4,12 @@
 <hr>
 </header>
 <main>
+<section>
+{{- range where .Site.RegularPages "Section" "" -}}
+<a href="{{ .RelPermalink }}">{{ lower .Title }}</a> 
+{{ end -}}
+<hr>
+</section>
 {{- range where .Site.RegularPages "Params.pin" true -}}
 <section>
 <span>pinned writing:</span>
