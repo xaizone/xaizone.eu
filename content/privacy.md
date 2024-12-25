@@ -1,6 +1,7 @@
 ---
 title: "Privacy"
 layout: page
+description: "Privacy policy for this website."
 ---
 
 I collect very basic access logs through Nginx's core functionality (access_log) on this website, this log contains IP addresses, browser user agents and which page has been visited. All IP addresses are obfuscated.

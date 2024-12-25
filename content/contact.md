@@ -1,6 +1,7 @@
 ---
 title: "Contact"
 layout: page
+description: "Ways to get in contact with me."
 ---
 
 I'm a total zoomer so the platforms listed below are probably the fastest way to get a hold of me.
