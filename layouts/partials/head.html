@@ -11,7 +11,7 @@
 
 <link rel="shortcut icon" href="{{ .Site.Params.favicon | relURL }}">
 
-<link rel="stylesheet" href="{{ .Site.Params.stylesheet | relURL }}">
+<link rel="stylesheet" href="{{ if and (eq .Section "list") (eq .Page.Kind "page") }}{{ .Site.Params.stylesheetList | relURL }}{{ else }}{{ .Site.Params.stylesheet | relURL }}{{ end }}">
 
 {{- range .AlternativeOutputFormats }}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink | safeURL }}">

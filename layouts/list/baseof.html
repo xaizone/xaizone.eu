@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode}}">
+<head>
+{{ partial "head.html" . }}
+</head>
+<body>
+{{- if not .IsHome }}{{ partial "breadcrumb.html" . }}{{- end }}
+{{- block "main" . }}{{- end }}
+{{ if eq .Page.Kind "section" }}{{ partial "footer.html" . }}{{- end }}
+</body>
+</html>
