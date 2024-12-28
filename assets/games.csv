@@ -1,2 +1,35 @@
-"Platform","Game","Date finished","Time spent","Rating","Review","Comment"
-"PC","test","","all","100/100","[link test](https://xaizone.eu)","funny little game"
+Platform,Game,Date finished,Time spent,Rating,Review,Steam Deck Friendly?,Comment
+Switch,Bayonetta,2018 (?),?,4/5,,Yes (Perfect),Very challenging hack-n-slash game with good humor
+PC,Borderlands 2,2015 (?),?,4/5,,Yes (Playable),"Great humor, very unique game with basically infinite replayability"
+PC,Celeste,2024-06-28,10 hours,5/5,[Steam](https://steamcommunity.com/id/xaizone/recommended/504230/),Yes (Perfect),Awesome platformer with great art style and soundtrack
+PS1,Crash Bandicoot,2006,?,5/5,,"Emulated, Yes (Perfect)","Second ever game I’ve played, still my favorite game to play even after all these years"
+PS1,Crash Bandicoot 3: Warped,2006,?,5/5,,"Emulated, Yes (Perfect)","First ever game I’ve played, my all time favorite game that I play through at least once a year"
+PC,Fallout 3,2015 (?),?,5/5,,Not tested,Introduction to one of my favorite games ever made
+PC,Fallout 4,2015 (?),?,5/5,,Not tested,"Finished the game in basically one sitting, great sandbox, a must play game from Bethesda Softworks"
+PC,Fallout: New Vegas,2023 (?),?,4/5,,Not tested,"Very slow-paced and definitely not my favorite, but still a great Fallout game"
+PSP,God of War: Chains of Olympus,2011 (?),?,3/5,,Not tested,"God of War on the go, not very memorable, just like the other games from the series, but fun gameplay loop"
+PSP,God of War: Ghost of Sparta,2012 (?),?,3/5,,Not tested,"Another God of War on the go, gameplay stays the same, story not memorable"
+Xbox 360,Grand Theft Auto IV,2009 (?),?,4/5,,Not tested,"Funny characters, breathtaking physics for the year"
+Xbox 360,Grand Theft Auto V,2013,?,5/5,,Not tested,"Great jokes, great characters, good gameplay; it speaks for itself that even after 10+ years it’s still doing strong in GTA Online"
+PSP,Grand Theft Auto: Liberty City Stories,2010 (?),?,3/5,,Not tested,"Don’t remember much of this game, I just know it was one of the only portable GTA games"
+PC,Grand Theft Auto: San Andreas,2007 (?),?,5/5,,Not tested,"Childhood game, still amazing after all these years"
+PSP,Grand Theft Auto: Vice City Stories,2010 (?),?,3/5,,Not tested,"Just like with Liberty City Stories, “portable GTA game”, don’t remember much"
+PC,Half-Life: Alyx,2021-12-21,10 hours,5/5,,Not tested,This is the closest we will ever get to Half-Life 3
+PC,It Takes Two,2021-10-16,18 hours,5/5,,Not tested,"The best co-op game ever made, definitely recommend to everyone"
+PC,Life is Strange,2024-11-29,19.6 hours,5/5,[Steam](https://steamcommunity.com/id/xaizone/recommended/319630/),Yes (Perfect),"I’m not sure why it took me so long to play through this game; One of the best, if not the best, narrative adventure games; must play for anybody even non-gamers"
+PC,Mafia I,2007 (?),?,5/5,,Not tested,"Czech masterpiece, this game is a piece of my soul"
+Xbox 360,Mafia II,2011 (?),?,5/5,,Not tested,Another Czech masterpiece; I always keep coming back to this game after a couple of years
+PC,Mafia III,2020,20 hours (?),2/5,,Not tested,"This is not a Mafia game, stay away, play the previous games"
+PC,Need for Speed: Underground,2006 (?),?,5/5,,Not tested,"My second favorite NFS game, it’s also the first one I ever touched; true classic"
+PC,Need for Speed: Underground 2,2007 (?),?,5/5,,Not tested,My most favorite NFS game; another classic with timeless soundtrack
+PC,NieR:Automata,2024-05-10,12 hours,5/5,,Yes (Playable),"Great characters, great visuals, amazing soundtrack; I recommend playing with SpecialK mod"
+PC,Playing Kafka,2024-06-04,1 hour,5/5,[Steam](https://steamcommunity.com/id/xaizone/recommended/2911850/),Yes (Perfect),"Great interpretation of Kafka's works, lovely Czech dabing and soundtrack; definitely recommend playing through it as it’s short and is completely F2P"
+PC,Polda 3,2022,?,5/5,,Not tested,"Czech classic adventure game, possible to play even on mobile"
+PC,Polda 7,2022,?,5/5,,Not tested,"Latest episode of a classic Czech point and click adventure game, as good as the previous ones"
+PC,Portal,2013,?,5/5,,Not tested,"Still one of the best puzzle games ever made, outstanding mechanics for the year of release"
+PC,Portal 2,2013,?,5/5,,Not tested,"Best co-op puzzle game I’ve ever played, as unique as the first one"
+PC,Quake,2024-09-11,5 hours,5/5,,Not tested,Beginnings of the FPS genre; I recommend playing the JoeQuake mod
+PC,Saints Row IV,2014 (?),?,3/5,,Not tested,"Not very memorable, just like The Third, but still a fun game"
+PC,Saints Row: The Third,2014 (?),?,3/5,,Not tested,"Funny GTA-like game with strange weapons and characters, honestly don’t remember it much"
+Switch,Super Mario Odyssey,2018,?,3/5,,"Emulated, Yes (Perfect)","Casual Mario game, fun to play, not much to say honestly"
+Switch,The Legend of Zelda: Breath of the Wild,2018,?,3/5,,"Emulated, Yes (Perfect)","Open world Zelda game, I don’t remember much from this game"
