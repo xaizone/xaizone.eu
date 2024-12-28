@@ -5,9 +5,7 @@
 </header>
 <main>
 <section>
-{{- range where .Site.RegularPages "Section" "" -}}
-<a href="{{ .RelPermalink }}">{{ lower .Title }}</a> 
-{{ end -}}
+<a href="{{ "/contact" | relURL }}">contact</a> <a href="{{ "/list" | relURL }}">lists</a> <a href="{{ "/stats" | relURL }}">stats</a>
 <hr>
 </section>
 {{- range where .Site.RegularPages "Params.pin" true -}}
