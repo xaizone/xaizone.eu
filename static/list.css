@@ -55,7 +55,7 @@ tr:nth-child(even) {
 	background-color: #eee;
 }
 
-tr:hover {
+tbody > tr:hover {
 	background-color: #ddd;
 }
 
@@ -84,5 +84,5 @@ tr:hover {
     a:hover { color: #9df; }
     hr { border-color: #666; }
     tr:nth-child(even) { background-color: #181818;}
-    tr:hover { background-color: #222; }
+    tbody > tr:hover { background-color: #222; }
 }
