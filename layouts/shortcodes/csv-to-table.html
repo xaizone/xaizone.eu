@@ -5,19 +5,23 @@ shortcode for generating scrollable html tables from csv for my hugo website
 generate it like this from your markdown file, drop file in /assets
 < csv-to-table "games.csv" > (include double curly brackets on both sides, i cannot include them in the comment)
 
-be careful about the csv format, i like to keep a simple "last modified date" in the second row and first column - the csv looks like this:
+the csv file looks like this:
 
 "Platform","Game","Date finished","Time spent","Rating","Review","Comment"
-"2024-12-27","","","","","",""
+"PC","test","","all","100/100","[link test](https://xaizone.eu)","funny little game"
 
-if nothing is written in this cell, no last modified text is written at the bottom of the page
+be careful! i couldn't figure out a way to get the full path of a file when passed into a shortcode, so the folder /assets is hardcoded as seen below
 
 supports writing markdown inside the csv itself, can be used for stuff like links
+
+automatically writes the last modified date and time at the bottom of the page
 
 -->
 
 {{- with $file := .Get 0 -}}
   {{- with resources.Get $file -}}
+  <!-- get the last modified file, watch out for the hardcoded /assets path! more explained above -->
+  {{ $mod := (os.Stat (path.Join "/assets" .RelPermalink)).ModTime | time.Format $.Site.Params.dateFormatLong }}
     {{- with . | transform.Unmarshal -}}
     <!-- wrap in div to allow horizontal scrollbar -->
     <div style="overflow-x: auto;">
@@ -31,8 +35,8 @@ supports writing markdown inside the csv itself, can be used for stuff like link
           </tr>
         </thead>
         <tbody>
-          <!-- start at third index, index 0 = header, index 1 = last modified -->
-          {{ $data := after 2 . }}
+          <!-- start at second row -->
+          {{ $data := after 1 . }}
           {{ range $data }}
             <tr>
               {{ range . }}
@@ -43,10 +47,8 @@ supports writing markdown inside the csv itself, can be used for stuff like link
         </tbody>
       </table>
     </div>
-    <!-- get second row, first column - used for last modified date -->
-    {{ $modified := index (index . 1) 0 }}
-    <!-- handle if list contains only one item and don't write last modified text if doesn't exist -->
-    <p>{{ len $data }} {{if eq $data 1}}item{{else}}items{{end}}{{if len $modified }}, Last modified: {{ $modified }}{{end}}</p>
+    <!-- handle if list contains only one item and don't write last modified text if doesn't exist, which should never happen -->
+    <p>{{ len $data }} {{if eq $data 1}}item{{else}}items{{end}}{{if $mod }}, Last modified: {{ $mod }}{{end}}</p>
     {{ end }}
   {{ end }}
 {{ end }}

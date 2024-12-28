@@ -1,4 +1,5 @@
 baseURL: 'https://xaizone.eu'
+timeZone: Europe/Prague
 languageCode: en
 title: 'xaizone.eu'
 enableRobotsTXT: true
@@ -9,6 +10,7 @@ markup:
 
 params:
   dateFormat: '2006-01-02'
+  dateFormatLong: '2006-01-02 15:04:05 -0700'
   favicon: 'favicon.svg'
   stylesheet: 'style.css'
   stylesheetList: 'list.css'
