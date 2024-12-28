@@ -21,7 +21,7 @@ automatically writes the last modified date and time at the bottom of the page
 {{- with $file := .Get 0 -}}
   {{- with resources.Get $file -}}
   <!-- get the last modified file, watch out for the hardcoded /assets path! more explained above -->
-  {{ $mod := (os.Stat (path.Join "/assets" .RelPermalink)).ModTime | time.Format $.Site.Params.dateFormatLong }}
+  {{ $mod := (os.Stat (path.Join "/assets" .)).ModTime | time.Format $.Site.Params.dateFormatLong }}
     {{- with . | transform.Unmarshal -}}
     <!-- wrap in div to allow horizontal scrollbar -->
     <div style="overflow-x: auto;">
