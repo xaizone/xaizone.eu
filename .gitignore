@@ -2,3 +2,4 @@ public
 resources
 /.hugo_build.lock
 .DS_store
+data/assets.yaml

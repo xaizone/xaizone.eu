@@ -10,18 +10,18 @@ the csv file looks like this:
 "Platform","Game","Date finished","Time spent","Rating","Review","Comment"
 "PC","test","","all","100/100","[link test](https://xaizone.eu)","funny little game"
 
-be careful! i couldn't figure out a way to get the full path of a file when passed into a shortcode, so the folder /assets is hardcoded as seen below
-
 supports writing markdown inside the csv itself, can be used for stuff like links
 
-automatically writes the last modified date and time at the bottom of the page
+uses a simple one liner to get the latest modified date from git log
+
+mkdir data && > data/assets.yaml && for f in assets/*.*; do echo $${f##*/}: "$$( git log --date=format:"%Y-%m-%d %H:%M:%S" --pretty="%ad" -1 $$f)" >> data/assets.yaml; done
 
 -->
 
 {{- with $file := .Get 0 -}}
   {{- with resources.Get $file -}}
-  <!-- get the last modified file, watch out for the hardcoded /assets path! more explained above -->
-  {{ $mod := (os.Stat (path.Join "/assets" .)).ModTime | time.Format $.Site.Params.dateFormatLong }}
+  <!-- get the last modified date for a file from the data file -->
+  {{ $mod := (index $.Site.Data.assets $file ) }}
     {{- with . | transform.Unmarshal -}}
     <!-- wrap in div to allow horizontal scrollbar -->
     <div style="overflow-x: auto;">
@@ -48,7 +48,7 @@ automatically writes the last modified date and time at the bottom of the page
       </table>
     </div>
     <!-- handle if list contains only one item and don't write last modified text if doesn't exist, which should never happen -->
-    <p>{{ len $data }} {{if eq $data 1}}item{{else}}items{{end}}{{if $mod }}, Last modified: {{ $mod }}{{end}}</p>
+    <p>{{ len $data }} {{if eq $data 1}}item{{else}}items{{end}}{{if $mod }}, Last modified: {{ $mod | time.Format $.Site.Params.dateFormatLong }}{{end}}</p>
     {{ end }}
   {{ end }}
 {{ end }}
