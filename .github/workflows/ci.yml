@@ -22,7 +22,7 @@ jobs:
       with:
         hugo-version: 'latest'
     - name: build hugo
-      run: hugo --minify
+      run: make build
     - name: deploy website
       uses: easingthemes/ssh-deploy@main
       env:
