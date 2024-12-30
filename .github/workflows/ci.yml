@@ -9,6 +9,7 @@ on:
       - 'LICENSE'
       - '.gitignore'
       - '.github/**'
+      - 'Makefile'
 
   workflow_dispatch:
 
