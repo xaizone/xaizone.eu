@@ -1,7 +1,7 @@
 {{- define "main" }}
 <header>
 <h1>{{ .Title }}</h1>
-<span><time datetime="{{ .Date }}">{{ .Date | time.Format .Site.Params.dateFormat }}</time> / {{ .WordCount }} words / {{ partial "tags.html" . }}</span>
+<span><time datetime="{{ .Date }}">{{ .Date | time.Format .Site.Params.dateFormat }}</time> {{if ne .Date .Lastmod }}(Updated: {{.Lastmod | time.Format .Site.Params.dateFormat }}){{end}} / {{ .WordCount }} words / {{ partial "tags.html" . }}</span>
 <hr>
 </header>
 <main>

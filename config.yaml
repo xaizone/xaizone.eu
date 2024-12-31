@@ -10,7 +10,7 @@ markup:
 
 params:
   dateFormat: '2006-01-02'
-  dateFormatLong: '2006-01-02 15:04:05 -0700'
+  dateFormatLong: '2006-01-02 15:04'
   favicon: 'favicon.svg'
   stylesheet: 'style.css'
   stylesheetList: 'list.css'
