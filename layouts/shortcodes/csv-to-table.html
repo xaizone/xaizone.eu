@@ -16,6 +16,8 @@ uses a simple one liner to get the latest modified date from git log
 
 mkdir data && > data/assets.yaml && for f in assets/*.*; do echo $${f##*/}: "$$( git log --date=format:"%Y-%m-%d %H:%M:%S" --pretty="%ad" -1 $$f)" >> data/assets.yaml; done
 
+stores this inside the data/assets.yaml file, which you can later access using .Site.Data
+
 -->
 
 {{- with $file := .Get 0 -}}
@@ -47,7 +49,7 @@ mkdir data && > data/assets.yaml && for f in assets/*.*; do echo $${f##*/}: "$$(
         </tbody>
       </table>
     </div>
-    <!-- handle if list contains only one item and don't write last modified text if doesn't exist, which should never happen -->
+    <!-- handle if list contains only one item and don't write last modified text if doesn't exist-->
     <p>{{ len $data }} {{if eq $data 1}}item{{else}}items{{end}}{{if $mod }}, Last modified: {{ $mod | time.Format $.Site.Params.dateFormatLong }}{{end}}</p>
     {{ end }}
   {{ end }}
