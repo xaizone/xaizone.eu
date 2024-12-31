@@ -6,6 +6,6 @@
 <body>
 {{- if not .IsHome }}{{ partial "breadcrumb.html" . }}{{- end }}
 {{- block "main" . }}{{- end }}
-{{ if eq .Page.Kind "section" }}{{ partial "footer.html" . }}{{- end }}
+{{ partial "footer.html" . }}
 </body>
 </html>
