@@ -19,4 +19,4 @@ I support PGP encryption! My fingerprint is:
 BCEA 5F69 EAFB FC44 B191 BD42 0720 CF05 EE70 486C
 ```
 
-You can query my keys through the [OpenPGP Keyserver](https://keys.openpgp.org/search?q=BCEA5F69EAFBFC44B191BD420720CF05EE70486C) ([Direct URL](https://keys.openpgp.org/vks/v1/by-fingerprint/BCEA5F69EAFBFC44B191BD420720CF05EE70486C)).
+You can query my keys through the [OpenPGP Keyserver](https://keys.openpgp.org/search?q=root%40xaizone.eu) ([Direct URL](https://keys.openpgp.org/pks/lookup?op=get&options=mr&search=root@xaizone.eu)).
