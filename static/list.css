@@ -63,6 +63,12 @@ tbody > tr:hover {
 	background-color: #ddd;
 }
 
+input {
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
 .breadcrumb li {
     display: inline;
     word-wrap: break-word;
@@ -89,4 +95,5 @@ tbody > tr:hover {
     hr { border-color: #666; }
     tr:nth-child(even) { background-color: #181818;}
     tbody > tr:hover { background-color: #222; }
+    input { background-color: #111; border-color: #333; color: #ddd }
 }

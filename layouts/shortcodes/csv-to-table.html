@@ -20,6 +20,18 @@ stores this inside the data/assets.yaml file, which you can later access using .
 
 -->
 
+<p>Search: <input type="text" onkeyup="searchTable()"></p>
+
+<script>
+  function searchTable() {
+    Array.from(document.querySelectorAll("tr")).forEach((row, index) => {
+      row.style.display = index === 0 || Array.from(row.cells).some(cell =>
+        (cell.textContent || "").toUpperCase().includes(document.querySelector("input").value.toUpperCase())
+      ) ? "" : "none";
+    });
+  }
+</script>
+
 {{- with $file := .Get 0 -}}
   {{- with resources.Get $file -}}
   <!-- get the last modified date for a file from the data file -->
