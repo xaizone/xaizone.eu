@@ -1,9 +1,12 @@
 <!--
 
-shortcode for generating scrollable html tables from csv for my hugo website
+shortcode for generating scrollable html tables from csv with optional javascript searchbox
 
-generate it like this from your markdown file, drop file in /assets
-< csv-to-table "games.csv" > (include double curly brackets on both sides, i cannot include them in the comment)
+generate the table like this from your markdown file (e.g. /content/list/games.md), make sure you drop the csv file inside the /assets folder (e.g. /assets/games.csv)
+
+< csv-to-table csv="games.csv" searchBox=1 > (include double curly brackets on both sides, i cannot include them in the comment)
+
+searchBox=1 is optional and can be left out, or explicitely set to 0
 
 the csv file looks like this:
 
@@ -20,6 +23,7 @@ stores this inside the data/assets.yaml file, which you can later access using .
 
 -->
 
+{{ if .Get "searchBox" }}
 <p>Search: <input type="text" onkeyup="searchTable()"></p>
 
 <script>
@@ -31,8 +35,9 @@ stores this inside the data/assets.yaml file, which you can later access using .
     });
   }
 </script>
+{{end}}
 
-{{- with $file := .Get 0 -}}
+{{- with $file := .Get "csv" -}}
   {{- with resources.Get $file -}}
   <!-- get the last modified date for a file from the data file -->
   {{ $mod := (index $.Site.Data.assets $file ) }}

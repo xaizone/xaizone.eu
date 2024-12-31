@@ -7,4 +7,4 @@ This is a list of single-player and co-op games with actual endings that I've co
 
 Additionally, I've tried to include a simple Steam Deck "playability" rating for most of the recent games or games I've emulated, since it has pretty much become my main gaming machine now.
 
-{{< csv-to-table "games.csv" >}}
+{{< csv-to-table csv="games.csv" searchBox=1 >}}
